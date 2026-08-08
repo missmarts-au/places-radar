@@ -222,7 +222,11 @@ function beep() {
   }
 }
 
+window.__alertLog = []; // inspected by pre-trip sim tests
+
 function showAlert(p, mins) {
+  window.__alertLog.push({ id: p.id, name: p.name, mins });
+  console.log(`[ALERT] ${p.name} — ${mins} min`);
   alertText.innerHTML = `${state.sim ? '<span class="sim-chip">SIM</span>' : ''}📍 <strong>${p.name}</strong> is ${mins} min walk away!`;
   alertBanner.hidden = false;
   alertTarget = p;
@@ -347,12 +351,56 @@ function renderAll() {
   checkAlerts();
 }
 
+// ---------- simulated walk (?sim=cdmx | ?sim=nyc) ----------
+// Fakes GPS: walks in a straight line toward the city's seed cluster at 8x
+// real walking speed so alerts can be tested before the trip. Never runs
+// unless explicitly requested via the URL.
+
+const SIM_ROUTES = {
+  // start ~25 walking minutes out, walk through the cluster
+  cdmx: { from: { lat: 19.4438, lng: -99.2015 }, to: { lat: 19.4155, lng: -99.178 } },
+  nyc: { from: { lat: 40.7484, lng: -73.9857 }, to: { lat: 40.7794, lng: -73.9632 } },
+};
+
+function startSimWalk(cityKey) {
+  const route = SIM_ROUTES[cityKey];
+  if (!route) return false;
+  state.sim = true;
+  state.city = cityKey;
+  citySelect.value = cityKey;
+  setCityView();
+  const SPEED = (80 / 60) * 8; // 8x walking speed, m/s
+  const TICK_MS = 1000;
+  const total = haversineMeters(route.from.lat, route.from.lng, route.to.lat, route.to.lng);
+  let travelled = 0;
+  console.log(`[SIM] walking ${Math.round(total)} m at 8x speed`);
+  const timer = setInterval(() => {
+    travelled += SPEED * (TICK_MS / 1000);
+    const f = Math.min(travelled / total, 1);
+    const lat = route.from.lat + (route.to.lat - route.from.lat) * f;
+    const lng = route.from.lng + (route.to.lng - route.from.lng) * f;
+    onPosition(lat, lng, 10);
+    if (f >= 1) {
+      clearInterval(timer);
+      console.log('[SIM] arrived');
+      const pre = document.createElement('pre');
+      pre.id = 'simResult';
+      pre.hidden = true;
+      pre.textContent = JSON.stringify(window.__alertLog);
+      document.body.appendChild(pre);
+    }
+  }, TICK_MS);
+  return true;
+}
+
 // ---------- boot ----------
 
 async function boot() {
   setCityView();
   await loadPlaces();
   renderAll();
+  const simCity = new URLSearchParams(location.search).get('sim');
+  if (simCity && startSimWalk(simCity)) return;
   startGeolocation();
 }
 
