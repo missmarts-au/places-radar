@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <title>Places Radar</title>
+  <meta name="theme-color" content="#0b7285">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Places Radar">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>📍 Places Radar</h1>
+    <select id="citySelect" aria-label="City">
+      <option value="cdmx">CDMX</option>
+      <option value="nyc">NYC</option>
+    </select>
+  </header>
+
+  <div class="controls">
+    <div class="chips" id="tagChips">
+      <button class="chip active" data-tag="all">All</button>
+      <button class="chip" data-tag="eat">🍽 Eat</button>
+      <button class="chip" data-tag="see">👀 See</button>
+      <button class="chip" data-tag="walk">🚶 Walk</button>
+    </div>
+    <label class="radius">
+      <input type="range" id="radiusSlider" min="5" max="20" step="1" value="15">
+      <span id="radiusLabel">15 min</span>
+    </label>
+  </div>
+
+  <div id="gpsHint" class="gps-hint" hidden>
+    <span>Location is off — distances unavailable. Enable it in
+    Settings → Privacy → Location Services → Safari, then reload.</span>
+    <button id="gpsHintClose" aria-label="Dismiss">✕</button>
+  </div>
+
+  <div id="alertBanner" class="alert-banner" hidden>
+    <span id="alertText"></span>
+    <button id="alertClose" aria-label="Dismiss">✕</button>
+  </div>
+
+  <main id="map"></main>
+
+  <section class="sheet" id="sheet">
+    <button class="sheet-handle" id="sheetHandle" aria-label="Toggle list">
+      <span class="grabber"></span>
+      <span id="sheetTitle">Nearby places</span>
+    </button>
+    <div class="sheet-body" id="placeList"></div>
+    <div class="sheet-footer" id="pendingFooter" hidden>
+      <button id="copyPending">📋 Copy pending for Claude</button>
+      <button id="clearPending">Clear pending</button>
+    </div>
+  </section>
+
+  <button class="fab" id="addFab" aria-label="Add a place">＋</button>
+
+  <dialog id="addModal">
+    <form method="dialog" id="addForm">
+      <h2>Add a place</h2>
+      <input type="text" id="addInput" placeholder="Name or Google Maps link" autocomplete="off">
+      <div class="row">
+        <select id="addTag">
+          <option value="eat">🍽 Eat</option>
+          <option value="see">👀 See</option>
+          <option value="walk">🚶 Walk</option>
+        </select>
+        <select id="addCity">
+          <option value="cdmx">CDMX</option>
+          <option value="nyc">NYC</option>
+        </select>
+      </div>
+      <div id="addResults"></div>
+      <div class="row modal-actions">
+        <button type="button" id="addSearch">Search</button>
+        <button type="button" id="addCancel">Cancel</button>
+      </div>
+      <p class="tiny">Search by <a href="https://nominatim.org" target="_blank" rel="noopener">Nominatim</a> / OpenStreetMap</p>
+    </form>
+  </dialog>
+
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+:root {
+  --teal: #0b7285;
+  --eat: #e8590c;
+  --see: #1971c2;
+  --walk: #2f9e44;
+  --bg: #ffffff;
+  --ink: #212529;
+  --muted: #868e96;
+  --card: #f8f9fa;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+}
+
+* { box-sizing: border-box; }
+
+[hidden] { display: none !important; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  overscroll-behavior: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: calc(env(safe-area-inset-top, 0px) + 8px) 12px 8px;
+  background: var(--teal);
+  color: #fff;
+}
+
+.topbar h1 { font-size: 17px; margin: 0; font-weight: 700; }
+
+.topbar select {
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 8px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--teal);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 10px;
+  background: #f1f3f5;
+  flex-wrap: wrap;
+}
+
+.chips { display: flex; gap: 6px; }
+
+.chip {
+  border: 1px solid #ced4da;
+  background: #fff;
+  border-radius: 999px;
+  padding: 5px 10px;
+  font-size: 13px;
+}
+
+.chip.active {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: #fff;
+  font-weight: 600;
+}
+
+.radius { display: flex; align-items: center; gap: 6px; font-size: 13px; }
+.radius input { width: 80px; accent-color: var(--teal); }
+#radiusLabel { min-width: 46px; font-weight: 600; }
+
+#map { flex: 1; min-height: 200px; }
+
+.gps-hint {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 12px;
+  background: #fff3bf;
+  color: #5c4d00;
+  font-size: 13px;
+}
+.gps-hint button { border: none; background: none; font-size: 15px; }
+
+.alert-banner {
+  position: fixed;
+  top: calc(env(safe-area-inset-top, 0px) + 52px);
+  left: 10px;
+  right: 10px;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--teal);
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 14px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  animation: slide-in 0.25s ease-out;
+}
+.alert-banner button { border: none; background: none; color: #fff; font-size: 16px; margin-left: auto; }
+@keyframes slide-in { from { transform: translateY(-16px); opacity: 0; } }
+
+.sheet {
+  background: var(--bg);
+  border-top: 1px solid #dee2e6;
+  max-height: 45vh;
+  display: flex;
+  flex-direction: column;
+  transition: max-height 0.2s ease-out;
+}
+.sheet.collapsed { max-height: 44px; }
+
+.sheet-handle {
+  border: none;
+  background: none;
+  width: 100%;
+  padding: 6px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.grabber { width: 36px; height: 4px; border-radius: 2px; background: #ced4da; }
+
+.sheet-body { overflow-y: auto; padding: 0 10px calc(env(safe-area-inset-bottom, 0px) + 8px); }
+
+.card {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  background: var(--card);
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+}
+.card.visited { opacity: 0.45; }
+.card .dot { width: 12px; height: 12px; border-radius: 50%; margin-top: 4px; flex: none; }
+.card .dot.pending { background: #fff; border: 2px dashed var(--muted); }
+.card .body { flex: 1; min-width: 0; }
+.card .name { font-weight: 700; font-size: 15px; }
+.card .meta { font-size: 13px; color: var(--muted); margin-top: 2px; }
+.card .meta .open { color: var(--walk); font-weight: 600; }
+.card .meta .closed { color: #e03131; font-weight: 600; }
+.card .note { font-size: 13px; margin-top: 3px; }
+.card .actions { display: flex; flex-direction: column; gap: 6px; align-items: flex-end; }
+.card .actions a, .card .actions label { font-size: 12px; white-space: nowrap; }
+.card .dist { font-weight: 700; font-size: 14px; color: var(--teal); white-space: nowrap; }
+
+.sheet-footer {
+  display: flex;
+  gap: 8px;
+  padding: 8px 10px calc(env(safe-area-inset-bottom, 0px) + 8px);
+  border-top: 1px solid #e9ecef;
+}
+.sheet-footer button {
+  flex: 1;
+  border: 1px solid var(--teal);
+  background: #fff;
+  color: var(--teal);
+  border-radius: 10px;
+  padding: 9px;
+  font-weight: 600;
+}
+
+.fab {
+  position: fixed;
+  right: 14px;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 60px);
+  z-index: 1100;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  background: var(--teal);
+  color: #fff;
+  font-size: 26px;
+  box-shadow: var(--shadow);
+}
+
+dialog {
+  border: none;
+  border-radius: 14px;
+  width: min(92vw, 420px);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+dialog::backdrop { background: rgba(0, 0, 0, 0.4); }
+dialog h2 { margin: 0 0 10px; font-size: 17px; }
+dialog input[type="text"], dialog select {
+  width: 100%;
+  font-size: 15px;
+  padding: 9px 10px;
+  border: 1px solid #ced4da;
+  border-radius: 9px;
+  margin-bottom: 8px;
+}
+dialog .row { display: flex; gap: 8px; }
+dialog .row select { flex: 1; }
+.modal-actions button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 9px;
+  border: 1px solid #ced4da;
+  background: #fff;
+  font-size: 15px;
+}
+#addSearch { background: var(--teal); border-color: var(--teal); color: #fff; font-weight: 700; }
+#addResults .result {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: 1px solid #e9ecef;
+  background: var(--card);
+  border-radius: 9px;
+  padding: 8px 10px;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+.tiny { font-size: 11px; color: var(--muted); margin: 6px 0 0; }
+.tiny a { color: var(--muted); }
+
+.sim-chip {
+  background: #e03131;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 6px;
+  padding: 2px 6px;
+  margin-right: 6px;
+}
+
+.leaflet-container { font: inherit; }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1b1e;
+    --ink: #e9ecef;
+    --card: #26282b;
+    --muted: #adb5bd;
+  }
+  .controls { background: #212326; }
+  .chip { background: #26282b; border-color: #3b3e42; color: var(--ink); }
+  dialog { background: #26282b; color: var(--ink); }
+  dialog input[type="text"], dialog select { background: #1a1b1e; color: var(--ink); border-color: #3b3e42; }
+  .modal-actions button { background: #26282b; color: var(--ink); border-color: #3b3e42; }
+  #addSearch { background: var(--teal); color: #fff; }
+  .sheet { border-top-color: #343a40; }
+  .sheet-footer button { background: #26282b; }
+}
