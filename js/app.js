@@ -10,8 +10,8 @@ import {
 // ---------- state ----------
 
 const CITY_CENTERS = {
-  cdmx: { lat: 19.4204, lng: -99.1755, zoom: 13, label: 'Mexico City' },
-  nyc: { lat: 40.7405, lng: -73.985, zoom: 13, label: 'New York' },
+  cdmx: { lat: 19.4204, lng: -99.1755, zoom: 13, label: 'Mexico City', tz: 'America/Mexico_City' },
+  nyc: { lat: 40.7405, lng: -73.985, zoom: 13, label: 'New York', tz: 'America/New_York' },
 };
 
 const TAG_COLORS = { eat: '#e8590c', see: '#1971c2', walk: '#2f9e44' };
@@ -27,6 +27,7 @@ const state = {
   alertedIds: new Set(),
   markers: new Map(), // id -> Leaflet marker
   sim: false,
+  pending: JSON.parse(localStorage.getItem('pendingAdds') || '[]'),
 };
 
 // ---------- map ----------
@@ -91,14 +92,14 @@ async function loadPlaces() {
 }
 
 function activePlaces() {
-  return state.places.filter(
+  return [...state.places, ...state.pending].filter(
     (p) =>
       p.list === state.city && (state.tag === 'all' || p.tag === state.tag)
   );
 }
 
 function minutesTo(p) {
-  if (!state.position) return null;
+  if (!state.position || p.lat == null) return null;
   return walkingMinutes(
     haversineMeters(state.position.lat, state.position.lng, p.lat, p.lng)
   );
@@ -117,6 +118,7 @@ function renderMarkers() {
   for (const m of state.markers.values()) m.remove();
   state.markers.clear();
   for (const p of activePlaces()) {
+    if (p.lat == null) continue; // unresolved pending adds have no pin yet
     const visited = state.visited.has(p.id);
     const marker = L.circleMarker([p.lat, p.lng], {
       radius: 9,
@@ -178,6 +180,7 @@ function renderList() {
         }> visited</label>
       </div>`;
     card.querySelector('.name').addEventListener('click', () => {
+      if (p.lat == null) return;
       map.setView([p.lat, p.lng], 16);
       state.markers.get(p.id)?.openPopup();
     });
@@ -251,6 +254,7 @@ alertBanner.addEventListener('click', (e) => {
 function checkAlerts() {
   if (!state.position) return;
   for (const p of activePlaces()) {
+    if (p.lat == null) continue;
     if (state.visited.has(p.id)) continue;
     if (state.alertedIds.has(p.id)) continue;
     const mins = minutesTo(p);
@@ -351,6 +355,166 @@ function renderAll() {
   checkAlerts();
 }
 
+// ---------- quick add ----------
+
+const addModal = document.getElementById('addModal');
+const addInput = document.getElementById('addInput');
+const addTag = document.getElementById('addTag');
+const addCity = document.getElementById('addCity');
+const addResults = document.getElementById('addResults');
+const pendingFooter = document.getElementById('pendingFooter');
+
+function persistPending() {
+  localStorage.setItem('pendingAdds', JSON.stringify(state.pending));
+  pendingFooter.hidden = state.pending.length === 0;
+}
+
+function savePendingPlace(place) {
+  const all = [...state.places, ...state.pending].filter((x) => x.lat != null);
+  if (place.lat != null && all.some((x) => isSamePlace(x, place))) {
+    addResults.innerHTML = '<p class="tiny">Already on your list 👍</p>';
+    return false;
+  }
+  state.pending.push(place);
+  persistPending();
+  renderAll();
+  return true;
+}
+
+function newPendingPlace({ name, lat, lng, note }) {
+  const city = addCity.value;
+  return {
+    id: `pending-${Date.now()}-${Math.floor(Math.random() * 1e4)}`,
+    name,
+    list: city,
+    tag: addTag.value,
+    lat: lat ?? null,
+    lng: lng ?? null,
+    note: note || '',
+    source: 'quick-add',
+    gmaps: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name)}`,
+    hours: null,
+    tz: CITY_CENTERS[city].tz,
+    visited: false,
+    pending: true,
+  };
+}
+
+let lastNominatim = 0;
+
+async function nominatimSearch(query, city) {
+  // be a polite Nominatim citizen: >=1 s between requests
+  const wait = Math.max(0, 1100 - (Date.now() - lastNominatim));
+  if (wait) await new Promise((r) => setTimeout(r, wait));
+  lastNominatim = Date.now();
+  const q = `${query}, ${CITY_CENTERS[city].label}`;
+  const url = `https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&q=${encodeURIComponent(q)}`;
+  const res = await fetch(url, { headers: { Accept: 'application/json' } });
+  if (!res.ok) throw new Error(`Nominatim ${res.status}`);
+  return res.json();
+}
+
+async function runAddSearch() {
+  const raw = addInput.value.trim();
+  if (!raw) return;
+  addResults.innerHTML = '<p class="tiny">Searching…</p>';
+
+  let query = raw;
+  if (/^https?:\/\//i.test(raw)) {
+    const extracted = parseGmapsQuery(raw);
+    if (extracted === null) {
+      // Short/opaque link — can't resolve in the browser. Save for Claude.
+      savePendingPlace(
+        newPendingPlace({
+          name: 'Unresolved link',
+          note: raw,
+        })
+      );
+      addResults.innerHTML =
+        '<p class="tiny">Saved as pending — Claude will resolve this link next sync. Nothing lost 👍</p>';
+      addInput.value = '';
+      return;
+    }
+    query = extracted;
+  }
+
+  let results;
+  try {
+    results = await nominatimSearch(query, addCity.value);
+  } catch {
+    addResults.innerHTML =
+      '<p class="tiny">Search failed (offline?). Tap below to save it as pending anyway.</p>';
+    results = [];
+  }
+
+  addResults.querySelectorAll('.result').forEach((b) => b.remove());
+  for (const r of results) {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'result';
+    btn.textContent = r.display_name;
+    btn.addEventListener('click', () => {
+      const saved = savePendingPlace(
+        newPendingPlace({
+          name: r.name || r.display_name.split(',')[0],
+          lat: Number(r.lat),
+          lng: Number(r.lon),
+        })
+      );
+      if (saved) {
+        addModal.close();
+        map.setView([Number(r.lat), Number(r.lon)], 16);
+      }
+    });
+    addResults.appendChild(btn);
+  }
+
+  // always offer save-as-unresolved fallback
+  const fallback = document.createElement('button');
+  fallback.type = 'button';
+  fallback.className = 'result';
+  fallback.textContent = `➕ Save "${query}" as pending (no pin yet — Claude resolves it later)`;
+  fallback.addEventListener('click', () => {
+    savePendingPlace(newPendingPlace({ name: query, note: raw !== query ? raw : '' }));
+    addModal.close();
+  });
+  addResults.appendChild(fallback);
+}
+
+document.getElementById('addFab').addEventListener('click', () => {
+  addCity.value = state.city;
+  addResults.innerHTML = '';
+  addInput.value = '';
+  addModal.showModal();
+});
+document.getElementById('addSearch').addEventListener('click', runAddSearch);
+document.getElementById('addCancel').addEventListener('click', () => addModal.close());
+document.getElementById('addForm').addEventListener('submit', (e) => e.preventDefault());
+addInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    runAddSearch();
+  }
+});
+
+document.getElementById('copyPending').addEventListener('click', async () => {
+  const payload = JSON.stringify(state.pending, null, 2);
+  try {
+    await navigator.clipboard.writeText(payload);
+    document.getElementById('copyPending').textContent = '✅ Copied — paste to Claude';
+  } catch {
+    prompt('Copy this and paste it to Claude:', payload);
+  }
+});
+
+document.getElementById('clearPending').addEventListener('click', () => {
+  if (!confirm('Clear pending places? Only do this AFTER Claude confirmed they are in the master list.')) return;
+  state.pending = [];
+  persistPending();
+  document.getElementById('copyPending').textContent = '📋 Copy pending for Claude';
+  renderAll();
+});
+
 // ---------- simulated walk (?sim=cdmx | ?sim=nyc) ----------
 // Fakes GPS: walks in a straight line toward the city's seed cluster at 8x
 // real walking speed so alerts can be tested before the trip. Never runs
@@ -398,6 +562,7 @@ function startSimWalk(cityKey) {
 async function boot() {
   setCityView();
   await loadPlaces();
+  persistPending(); // shows the footer if quick-adds are waiting
   renderAll();
   const simCity = new URLSearchParams(location.search).get('sim');
   if (simCity && startSimWalk(simCity)) return;
