@@ -86,9 +86,13 @@ function updateSelfLayers() {
 // ---------- data ----------
 
 async function loadPlaces() {
-  const res = await fetch('places.json', { cache: 'no-cache' });
-  const data = await res.json();
-  state.places = data.places;
+  try {
+    const res = await fetch('places.json', { cache: 'no-cache' });
+    const data = await res.json();
+    state.places = data.places;
+  } catch {
+    state.places = []; // offline before first cache — quick-adds still work
+  }
 }
 
 function activePlaces() {
@@ -570,3 +574,9 @@ async function boot() {
 }
 
 boot();
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').catch(() => {
+    /* offline caching is a nice-to-have; the app works without it */
+  });
+}

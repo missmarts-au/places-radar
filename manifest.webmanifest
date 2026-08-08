@@ -1,0 +1,15 @@
+{
+  "name": "Places Radar",
+  "short_name": "Places",
+  "description": "Your saved places, walking distances, and nearby alerts while exploring.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b7285",
+  "theme_color": "#0b7285",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
