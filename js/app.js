@@ -219,15 +219,19 @@ function beep() {
       const osc = ctx.createOscillator();
       const gain = ctx.createGain();
       osc.frequency.value = freq;
-      osc.type = 'sine';
-      gain.gain.setValueAtTime(0.25, ctx.currentTime + t0);
+      osc.type = 'triangle'; // punchier than sine at the same volume
+      gain.gain.setValueAtTime(0.9, ctx.currentTime + t0);
       gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + t0 + dur);
       osc.connect(gain).connect(ctx.destination);
       osc.start(ctx.currentTime + t0);
       osc.stop(ctx.currentTime + t0 + dur);
     };
-    play(880, 0, 0.18);
-    play(1175, 0.2, 0.28);
+    // two rising chimes, repeated — hard to miss on the street
+    for (const round of [0, 0.9]) {
+      play(880, round, 0.18);
+      play(1175, round + 0.2, 0.18);
+      play(1568, round + 0.4, 0.35);
+    }
   } catch {
     /* audio may be blocked before first user gesture — fine */
   }
@@ -346,6 +350,35 @@ radiusSlider.addEventListener('input', () => {
   if (radiusCircle) radiusCircle.setRadius(radiusMetersForMinutes(state.radiusMin));
   checkAlerts();
 });
+
+// Keep-screen-awake toggle — the practical answer to "alerts while walking":
+// screen stays on, the app keeps watching GPS, alerts keep firing.
+let wakeLock = null;
+const wakeBtn = document.getElementById('wakeBtn');
+let wakeWanted = false;
+
+async function applyWake() {
+  try {
+    if (wakeWanted && 'wakeLock' in navigator && document.visibilityState === 'visible') {
+      wakeLock = await navigator.wakeLock.request('screen');
+      wakeLock.addEventListener('release', () => {
+        wakeLock = null;
+      });
+    } else if (!wakeWanted && wakeLock) {
+      await wakeLock.release();
+      wakeLock = null;
+    }
+  } catch {
+    wakeWanted = false; // not supported / denied — button just stays off
+  }
+  wakeBtn.classList.toggle('on', wakeWanted);
+}
+
+wakeBtn.addEventListener('click', () => {
+  wakeWanted = !wakeWanted;
+  applyWake();
+});
+document.addEventListener('visibilitychange', applyWake); // reacquire after tab switch
 
 const sheet = document.getElementById('sheet');
 document.getElementById('sheetHandle').addEventListener('click', () => {

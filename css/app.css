@@ -40,6 +40,16 @@ body {
 
 .topbar h1 { font-size: 17px; margin: 0; font-weight: 700; }
 
+.wake {
+  border: none;
+  border-radius: 8px;
+  padding: 6px 9px;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.22);
+  margin-left: auto;
+}
+.wake.on { background: #fff; box-shadow: 0 0 0 2px #ffd43b inset; }
+
 .topbar select {
   font-size: 15px;
   font-weight: 700;
