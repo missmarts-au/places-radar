@@ -140,20 +140,30 @@ function popupHtml(p) {
     }`;
 }
 
+// Stable per-city numbers: file order, never affected by filters or sorting,
+// so pin "23" on the map is always card "23" in the list.
+function numberPlaces() {
+  state.nums = new Map();
+  let n = 1;
+  for (const p of [...state.places, ...state.pending]) {
+    if (p.list === state.city) state.nums.set(p.id, n++);
+  }
+}
+
 function renderMarkers() {
   for (const m of state.markers.values()) m.remove();
   state.markers.clear();
   for (const p of activePlaces()) {
     if (p.lat == null) continue; // unresolved pending adds have no pin yet
     const visited = state.visited.has(p.id);
-    const marker = L.circleMarker([p.lat, p.lng], {
-      radius: 9,
-      color: '#fff',
-      weight: 2,
-      fillColor: visited ? '#adb5bd' : TAG_COLORS[p.tag] || '#495057',
-      fillOpacity: 0.95,
-      dashArray: p.pending ? '3 3' : null,
-    })
+    const color = visited ? '#adb5bd' : TAG_COLORS[p.tag] || '#495057';
+    const icon = L.divIcon({
+      className: 'num-pin-wrap',
+      html: `<div class="num-pin${p.pending ? ' pending' : ''}" style="background:${color}">${state.nums.get(p.id) ?? ''}</div>`,
+      iconSize: [26, 26],
+      iconAnchor: [13, 13],
+    });
+    const marker = L.marker([p.lat, p.lng], { icon })
       .addTo(map)
       .bindPopup(() => popupHtml(p));
     state.markers.set(p.id, marker);
@@ -192,8 +202,8 @@ function renderList() {
     const card = document.createElement('div');
     card.className = 'card' + (visited ? ' visited' : '');
     card.innerHTML = `
-      <span class="dot${p.pending ? ' pending' : ''}"
-        style="${p.pending ? '' : `background:${visited ? '#adb5bd' : TAG_COLORS[p.tag]}`}"></span>
+      <span class="num-chip${p.pending ? ' pending' : ''}"
+        style="background:${visited ? '#adb5bd' : TAG_COLORS[p.tag] || '#495057'}">${state.nums.get(p.id) ?? '·'}</span>
       <div class="body">
         <div class="name">${TAG_EMOJI[p.tag] || ''} ${esc(p.name)}${
           p.pending ? ' <em>(pending)</em>' : ''
@@ -462,6 +472,7 @@ document.getElementById('sheetHandle').addEventListener('click', () => {
 syncChips(); // reflect persisted filters
 
 function renderAll() {
+  numberPlaces();
   renderMarkers();
   renderList();
   checkAlerts();
