@@ -1054,11 +1054,11 @@
       "name": "Tacos Charly Oficial",
       "list": "cdmx",
       "tag": "eat",
-      "lat": 19.2955,
-      "lng": -99.1705,
-      "note": "Av. San Fernando 201, Tlalpan — cerca de tus puntos ⭐ (ubicación aprox)",
+      "lat": 19.2952,
+      "lng": -99.1607,
+      "note": "Suadero y pastor con estrella de la Guía Michelin — Av. San Fernando 201, Toriello Guerra, Tlalpan. Solo efectivo, llega temprano. Horario variable (tarde/noche; dom suele cerrar) — ubicación aprox sobre San Fernando",
       "source": "martha",
-      "gmaps": "https://www.google.com/maps/search/?api=1&query=Tacos+Charly+Av+San+Fernando+201+Tlalpan",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Tacos+Charly+Oficial+Av+San+Fernando+201+Tlalpan",
       "hours": null,
       "tz": "America/Mexico_City",
       "visited": false
@@ -1079,15 +1079,58 @@
     },
     {
       "id": "nyc-tmrrw",
-      "name": "TMRRW",
+      "name": "tm:rw",
       "list": "nyc",
       "tag": "see",
-      "lat": 40.7562,
-      "lng": -73.9871,
-      "note": "Tienda — 42nd St (ubicación aprox — confirmar)",
+      "lat": 40.7561,
+      "lng": -73.988,
+      "note": "Tienda tech flagship — 220 W 42nd St, Times Square (dirección confirmada)",
       "source": "martha",
-      "gmaps": "https://www.google.com/maps/search/?api=1&query=TMRRW+store+42nd+Street+NYC",
-      "hours": null,
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=tm%3Arw+220+W+42nd+St+New+York",
+      "hours": {
+        "mon": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "tue": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "23:00"
+          ]
+        ],
+        "sun": [
+          [
+            "10:00",
+            "23:00"
+          ]
+        ]
+      },
       "tz": "America/New_York",
       "visited": false
     },
@@ -1344,6 +1387,218 @@
       "hours": null,
       "tz": "America/New_York",
       "visited": false
+    },
+    {
+      "list": "nyc",
+      "source": "suggested",
+      "tz": "America/New_York",
+      "visited": false,
+      "id": "nyc-one-world-observatory",
+      "name": "One World Observatory",
+      "tag": "see",
+      "lat": 40.713,
+      "lng": -74.0131,
+      "note": "Mirador en el piso 100+ de One WTC — al lado del 9/11 Memorial, combínalos. Compra boletos con anticipación",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=One+World+Observatory+NYC",
+      "hours": null
+    },
+    {
+      "list": "nyc",
+      "source": "suggested",
+      "tz": "America/New_York",
+      "visited": false,
+      "id": "nyc-summit-one-vanderbilt",
+      "name": "Summit One Vanderbilt",
+      "tag": "see",
+      "lat": 40.7527,
+      "lng": -73.9788,
+      "note": "Mirador de espejos junto a Grand Central — el más espectacular de la ciudad, mejor al atardecer. Boletos con anticipación",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Summit+One+Vanderbilt+NYC",
+      "hours": null
+    },
+    {
+      "list": "nyc",
+      "source": "suggested",
+      "tz": "America/New_York",
+      "visited": false,
+      "id": "nyc-grand-central",
+      "name": "Grand Central Terminal",
+      "tag": "see",
+      "lat": 40.7527,
+      "lng": -73.9772,
+      "note": "El techo del main concourse con constelaciones — gratis, y la whispering gallery frente al Oyster Bar",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Grand+Central+Terminal+NYC",
+      "hours": {
+        "mon": [
+          [
+            "05:15",
+            "02:00"
+          ]
+        ],
+        "tue": [
+          [
+            "05:15",
+            "02:00"
+          ]
+        ],
+        "wed": [
+          [
+            "05:15",
+            "02:00"
+          ]
+        ],
+        "thu": [
+          [
+            "05:15",
+            "02:00"
+          ]
+        ],
+        "fri": [
+          [
+            "05:15",
+            "02:00"
+          ]
+        ],
+        "sat": [
+          [
+            "05:15",
+            "02:00"
+          ]
+        ],
+        "sun": [
+          [
+            "05:15",
+            "02:00"
+          ]
+        ]
+      }
+    },
+    {
+      "list": "nyc",
+      "source": "suggested",
+      "tz": "America/New_York",
+      "visited": false,
+      "id": "nyc-high-line",
+      "name": "The High Line",
+      "tag": "walk",
+      "lat": 40.7396,
+      "lng": -74.008,
+      "note": "Parque elevado sobre vías de tren — de Gansevoort St (pin) a Hudson Yards, ~2.3 km. Abre 7:00, cierre según temporada (~22:00 verano). Combina con Chelsea Market",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=The+High+Line+Gansevoort+entrance+NYC",
+      "hours": null
+    },
+    {
+      "list": "nyc",
+      "source": "suggested",
+      "tz": "America/New_York",
+      "visited": false,
+      "id": "nyc-little-island",
+      "name": "Little Island",
+      "tag": "walk",
+      "lat": 40.742,
+      "lng": -74.01,
+      "note": "Parque sobre pilotes en el Hudson (Pier 55) — gratis, cerca del extremo sur del High Line. Cierre según temporada",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Little+Island+Pier+55+NYC",
+      "hours": null
+    },
+    {
+      "list": "nyc",
+      "source": "suggested",
+      "tz": "America/New_York",
+      "visited": false,
+      "id": "nyc-dumbo-washington-st",
+      "name": "DUMBO — Washington Street",
+      "tag": "see",
+      "lat": 40.7033,
+      "lng": -73.9894,
+      "note": "La foto clásica del Manhattan Bridge entre edificios de ladrillo — combina con cruzar el Brooklyn Bridge caminando",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Washington+Street+DUMBO+Brooklyn",
+      "hours": null
+    },
+    {
+      "list": "nyc",
+      "source": "suggested",
+      "tz": "America/New_York",
+      "visited": false,
+      "id": "nyc-washington-square-park",
+      "name": "Washington Square Park",
+      "tag": "walk",
+      "lat": 40.7308,
+      "lng": -73.9973,
+      "note": "El arco + músicos callejeros — corazón de Greenwich Village",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Washington+Square+Park+NYC",
+      "hours": null
+    },
+    {
+      "list": "nyc",
+      "source": "suggested",
+      "tz": "America/New_York",
+      "visited": false,
+      "id": "nyc-bethesda-terrace",
+      "name": "Bethesda Terrace & Fountain",
+      "tag": "see",
+      "lat": 40.774,
+      "lng": -73.9709,
+      "note": "El rincón más bonito de Central Park — la fuente del ángel, la arcada con azulejos, y The Mall de camino",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Bethesda+Terrace+Central+Park",
+      "hours": {
+        "mon": [
+          [
+            "06:00",
+            "01:00"
+          ]
+        ],
+        "tue": [
+          [
+            "06:00",
+            "01:00"
+          ]
+        ],
+        "wed": [
+          [
+            "06:00",
+            "01:00"
+          ]
+        ],
+        "thu": [
+          [
+            "06:00",
+            "01:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:00",
+            "01:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:00",
+            "01:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:00",
+            "01:00"
+          ]
+        ]
+      }
+    },
+    {
+      "list": "nyc",
+      "source": "suggested",
+      "tz": "America/New_York",
+      "visited": false,
+      "id": "nyc-liberty-state-park-ferry",
+      "name": "Liberty State Park (Statue ferry dock NJ)",
+      "tag": "see",
+      "lat": 40.7089,
+      "lng": -74.0334,
+      "note": "Salida de Statue City Cruises desde NJ (terminal histórica CRRNJ, Jersey City) — mismos boletos que Battery Park pero con MUCHO menos fila, y hay estacionamiento. La opción más práctica desde las bases de NJ",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Statue+City+Cruises+Liberty+State+Park+Jersey+City",
+      "hours": null
     }
   ]
 }
