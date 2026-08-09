@@ -1202,6 +1202,63 @@
       "hours": null,
       "tz": "America/New_York",
       "visited": false
+    },
+    {
+      "id": "nyc-the-carnegie-club",
+      "name": "The Carnegie Club",
+      "list": "nyc",
+      "tag": "eat",
+      "lat": 40.7648,
+      "lng": -73.9791,
+      "note": "Old-world cocktail & cigar lounge near Carnegie Hall — known for Sinatra tribute nights. From address 156 W 56th St",
+      "source": "name",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=The+Carnegie+Club+156+W+56th+St+New+York",
+      "hours": {
+        "mon": [
+          [
+            "14:00",
+            "00:00"
+          ]
+        ],
+        "tue": [
+          [
+            "14:00",
+            "01:00"
+          ]
+        ],
+        "wed": [
+          [
+            "14:00",
+            "01:00"
+          ]
+        ],
+        "thu": [
+          [
+            "14:00",
+            "01:00"
+          ]
+        ],
+        "fri": [
+          [
+            "14:00",
+            "02:00"
+          ]
+        ],
+        "sat": [
+          [
+            "14:00",
+            "02:00"
+          ]
+        ],
+        "sun": [
+          [
+            "14:00",
+            "00:00"
+          ]
+        ]
+      },
+      "tz": "America/New_York",
+      "visited": false
     }
   ]
 }
