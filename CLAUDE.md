@@ -34,7 +34,8 @@ Martha will paste screenshots (IG/TikTok posts, listicles), Google Maps links
 ## Rules
 
 - `id` = `<list>-<kebab-name>`, unique across the file
-- `tag` ∈ `eat` | `see` | `walk` (pick the best fit)
+- `tag` ∈ `eat` | `see` | `walk` | `key` (pick the best fit; `key` ⭐ = orientation landmarks / home bases)
+- **Privacy rule for `key` entries:** this repo is PUBLIC. Personal bases (Airbnbs, friends'/family homes) get NEUTRAL names ("Base Fairview"), generic notes ("Punto clave"), and NEVER a street address in name/note. Public hotels may use their real name.
 - `note` = why it was saved + where it came from — this shows on the card, make it useful
 - `hours`: per-weekday `[["HH:MM","HH:MM"], ...]` 24 h local; close < open means past midnight; use `null` when unknown (never guess hours)
 - `tz`: `America/Mexico_City` for cdmx, `America/New_York` for nyc

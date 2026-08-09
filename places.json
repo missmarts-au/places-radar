@@ -13,13 +13,48 @@
       "source": "seed",
       "gmaps": "https://www.google.com/maps/search/?api=1&query=El+Vilsito+Mexico+City",
       "hours": {
-        "mon": [["19:30", "02:00"]],
-        "tue": [["19:30", "02:00"]],
-        "wed": [["19:30", "02:00"]],
-        "thu": [["19:30", "03:00"]],
-        "fri": [["19:30", "03:30"]],
-        "sat": [["19:30", "03:30"]],
-        "sun": [["19:30", "01:00"]]
+        "mon": [
+          [
+            "19:30",
+            "02:00"
+          ]
+        ],
+        "tue": [
+          [
+            "19:30",
+            "02:00"
+          ]
+        ],
+        "wed": [
+          [
+            "19:30",
+            "02:00"
+          ]
+        ],
+        "thu": [
+          [
+            "19:30",
+            "03:00"
+          ]
+        ],
+        "fri": [
+          [
+            "19:30",
+            "03:30"
+          ]
+        ],
+        "sat": [
+          [
+            "19:30",
+            "03:30"
+          ]
+        ],
+        "sun": [
+          [
+            "19:30",
+            "01:00"
+          ]
+        ]
       },
       "tz": "America/Mexico_City",
       "visited": false
@@ -35,12 +70,42 @@
       "source": "seed",
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Museo+Nacional+de+Antropologia+CDMX",
       "hours": {
-        "tue": [["09:00", "18:00"]],
-        "wed": [["09:00", "18:00"]],
-        "thu": [["09:00", "18:00"]],
-        "fri": [["09:00", "18:00"]],
-        "sat": [["09:00", "18:00"]],
-        "sun": [["09:00", "18:00"]]
+        "tue": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ]
       },
       "tz": "America/Mexico_City",
       "visited": false
@@ -56,12 +121,42 @@
       "source": "seed",
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Bosque+de+Chapultepec",
       "hours": {
-        "tue": [["05:00", "20:00"]],
-        "wed": [["05:00", "20:00"]],
-        "thu": [["05:00", "20:00"]],
-        "fri": [["05:00", "20:00"]],
-        "sat": [["05:00", "20:00"]],
-        "sun": [["05:00", "20:00"]]
+        "tue": [
+          [
+            "05:00",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "05:00",
+            "20:00"
+          ]
+        ],
+        "thu": [
+          [
+            "05:00",
+            "20:00"
+          ]
+        ],
+        "fri": [
+          [
+            "05:00",
+            "20:00"
+          ]
+        ],
+        "sat": [
+          [
+            "05:00",
+            "20:00"
+          ]
+        ],
+        "sun": [
+          [
+            "05:00",
+            "20:00"
+          ]
+        ]
       },
       "tz": "America/Mexico_City",
       "visited": false
@@ -77,13 +172,48 @@
       "source": "seed",
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Katz's+Delicatessen+NYC",
       "hours": {
-        "mon": [["08:00", "22:45"]],
-        "tue": [["08:00", "22:45"]],
-        "wed": [["08:00", "22:45"]],
-        "thu": [["08:00", "02:45"]],
-        "fri": [["08:00", "23:59"]],
-        "sat": [["00:00", "23:59"]],
-        "sun": [["00:00", "22:45"]]
+        "mon": [
+          [
+            "08:00",
+            "22:45"
+          ]
+        ],
+        "tue": [
+          [
+            "08:00",
+            "22:45"
+          ]
+        ],
+        "wed": [
+          [
+            "08:00",
+            "22:45"
+          ]
+        ],
+        "thu": [
+          [
+            "08:00",
+            "02:45"
+          ]
+        ],
+        "fri": [
+          [
+            "08:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "00:00",
+            "22:45"
+          ]
+        ]
       },
       "tz": "America/New_York",
       "visited": false
@@ -99,12 +229,42 @@
       "source": "seed",
       "gmaps": "https://www.google.com/maps/search/?api=1&query=The+Met+Fifth+Avenue",
       "hours": {
-        "mon": [["10:00", "17:00"]],
-        "tue": [["10:00", "17:00"]],
-        "wed": [["10:00", "17:00"]],
-        "fri": [["10:00", "21:00"]],
-        "sat": [["10:00", "21:00"]],
-        "sun": [["10:00", "17:00"]]
+        "mon": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "21:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "21:00"
+          ]
+        ],
+        "sun": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ]
       },
       "tz": "America/New_York",
       "visited": false
@@ -134,13 +294,492 @@
       "source": "name",
       "gmaps": "https://www.google.com/maps/search/?api=1&query=The+Morgan+Library+and+Museum+NYC",
       "hours": {
-        "tue": [["10:30", "17:00"]],
-        "wed": [["10:30", "17:00"]],
-        "thu": [["10:30", "17:00"]],
-        "fri": [["10:30", "19:00"]],
-        "sat": [["10:00", "18:00"]],
-        "sun": [["11:00", "18:00"]]
+        "tue": [
+          [
+            "10:30",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:30",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:30",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:30",
+            "19:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "11:00",
+            "18:00"
+          ]
+        ]
       },
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "nyc-papa-san",
+      "name": "Papa San",
+      "list": "nyc",
+      "tag": "eat",
+      "lat": 40.7524,
+      "lng": -73.9967,
+      "note": "⭐ Michelin nikkei/peruano — Manhattan West (ubicación por confirmar) — Lista de Vicky 🦔",
+      "source": "vicky-list",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Papa+San+NYC",
+      "hours": null,
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "nyc-din-tai-fung",
+      "name": "Din Tai Fung",
+      "list": "nyc",
+      "tag": "eat",
+      "lat": 40.762,
+      "lng": -73.9833,
+      "note": "Dumplings — 1633 Broadway — Lista de Vicky 🦔",
+      "source": "vicky-list",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Din+Tai+Fung+NYC",
+      "hours": null,
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "nyc-thai-diner",
+      "name": "Thai Diner",
+      "list": "nyc",
+      "tag": "eat",
+      "lat": 40.7207443,
+      "lng": -73.9957016,
+      "note": "⭐ — Lista de Vicky 🦔",
+      "source": "vicky-list",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Thai+Diner+NYC",
+      "hours": null,
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "nyc-amnh",
+      "name": "American Museum of Natural History",
+      "list": "nyc",
+      "tag": "see",
+      "lat": 40.7811007,
+      "lng": -73.9742362,
+      "note": "Lista de Vicky 🦔",
+      "source": "vicky-list",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=American+Museum+of+Natural+History+NYC",
+      "hours": {
+        "mon": [
+          [
+            "10:00",
+            "17:30"
+          ]
+        ],
+        "tue": [
+          [
+            "10:00",
+            "17:30"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "17:30"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "17:30"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:30"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "17:30"
+          ]
+        ],
+        "sun": [
+          [
+            "10:00",
+            "17:30"
+          ]
+        ]
+      },
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "nyc-grand-banks",
+      "name": "Grand Banks",
+      "list": "nyc",
+      "tag": "eat",
+      "lat": 40.7206,
+      "lng": -74.0157,
+      "note": "⭐ Drinks y vibes en velero histórico 🛥️ — Pier 25 — Lista de Vicky 🦔",
+      "source": "vicky-list",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Grand+Banks+NYC",
+      "hours": null,
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "nyc-seaglass-carousel",
+      "name": "SeaGlass Carousel",
+      "list": "nyc",
+      "tag": "see",
+      "lat": 40.7021621,
+      "lng": -74.0150044,
+      "note": "Battery Park — Lista de Vicky 🦔",
+      "source": "vicky-list",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=SeaGlass+Carousel+NYC",
+      "hours": null,
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "nyc-bryant-park",
+      "name": "Bryant Park",
+      "list": "nyc",
+      "tag": "see",
+      "lat": 40.7537509,
+      "lng": -73.9835428,
+      "note": "De noche ✨ — Lista de Vicky 🦔",
+      "source": "vicky-list",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Bryant+Park+NYC",
+      "hours": null,
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "nyc-bubbys",
+      "name": "Bubby's",
+      "list": "nyc",
+      "tag": "eat",
+      "lat": 40.7198226,
+      "lng": -74.0084234,
+      "note": "$ breakfast — Tribeca — Lista de Vicky 🦔",
+      "source": "vicky-list",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Bubby's+NYC",
+      "hours": null,
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "nyc-skirt-steak",
+      "name": "Skirt Steak",
+      "list": "nyc",
+      "tag": "eat",
+      "lat": 40.7468354,
+      "lng": -73.9901878,
+      "note": "$$ — Lista de Vicky 🦔",
+      "source": "vicky-list",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Skirt+Steak+NYC",
+      "hours": null,
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "nyc-medium-rare",
+      "name": "Medium Rare",
+      "list": "nyc",
+      "tag": "eat",
+      "lat": 40.7453122,
+      "lng": -73.9787228,
+      "note": "$$ — Lista de Vicky 🦔",
+      "source": "vicky-list",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Medium+Rare+NYC",
+      "hours": null,
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "nyc-nowon",
+      "name": "Nowon",
+      "list": "nyc",
+      "tag": "eat",
+      "lat": 40.7249,
+      "lng": -73.983,
+      "note": "Coreano $ — East Village — Lista de Vicky 🦔",
+      "source": "vicky-list",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Nowon+NYC",
+      "hours": null,
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "nyc-soothr",
+      "name": "Soothr",
+      "list": "nyc",
+      "tag": "eat",
+      "lat": 40.7323273,
+      "lng": -73.9873238,
+      "note": "Thai $$ — Lista de Vicky 🦔",
+      "source": "vicky-list",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Soothr+NYC",
+      "hours": null,
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "nyc-12-matcha",
+      "name": "12 Matcha",
+      "list": "nyc",
+      "tag": "eat",
+      "lat": 40.7259999,
+      "lng": -73.9925835,
+      "note": "Matcha — Bond St, NoHo — Lista de Vicky 🦔",
+      "source": "vicky-list",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=12+Matcha+NYC",
+      "hours": null,
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "nyc-ayada",
+      "name": "Ayada Thai",
+      "list": "nyc",
+      "tag": "eat",
+      "lat": 40.7457,
+      "lng": -73.8874,
+      "note": "Mango sticky rice — Elmhurst, Queens — Lista de Vicky 🦔",
+      "source": "vicky-list",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Ayada+Thai+NYC",
+      "hours": null,
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "nyc-tre",
+      "name": "Tre",
+      "list": "nyc",
+      "tag": "eat",
+      "lat": 40.7218109,
+      "lng": -73.9875935,
+      "note": "Happy hour under $12 — Ludlow St — Lista de Vicky 🦔",
+      "source": "vicky-list",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Tre+NYC",
+      "hours": null,
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "nyc-w-union-square",
+      "name": "W Union Square rooftop",
+      "list": "nyc",
+      "tag": "eat",
+      "lat": 40.7365763,
+      "lng": -73.9885429,
+      "note": "Rooftop — Lista de Vicky 🦔",
+      "source": "vicky-list",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=W+New+York+Union+Square",
+      "hours": null,
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "nyc-panna-ii",
+      "name": "Panna II",
+      "list": "nyc",
+      "tag": "eat",
+      "lat": 40.7262782,
+      "lng": -73.9864936,
+      "note": "Indio con mil luces — East Village — Lista de Vicky 🦔",
+      "source": "vicky-list",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Panna+II+NYC",
+      "hours": null,
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "nyc-hotel-hugo",
+      "name": "Hotel Hugo rooftop",
+      "list": "nyc",
+      "tag": "eat",
+      "lat": 40.7265,
+      "lng": -74.0089,
+      "note": "Rooftop SoHo — Lista de Vicky 🦔",
+      "source": "vicky-list",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Hotel+Hugo+SoHo+NYC",
+      "hours": null,
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "nyc-corner-store",
+      "name": "The Corner Store",
+      "list": "nyc",
+      "tag": "eat",
+      "lat": 40.7266398,
+      "lng": -73.9999617,
+      "note": "SoHo — Lista de Vicky 🦔",
+      "source": "vicky-list",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=The+Corner+Store+NYC",
+      "hours": null,
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "nyc-hirams",
+      "name": "Hiram's Roadstand",
+      "list": "nyc",
+      "tag": "eat",
+      "lat": 40.8415884,
+      "lng": -73.9747221,
+      "note": "Hot dogs $ — Fort Lee NJ — Lista de Vicky 🦔",
+      "source": "vicky-list",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Hiram's+Roadstand+NYC",
+      "hours": null,
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "nyc-tops-diner",
+      "name": "Tops Diner",
+      "list": "nyc",
+      "tag": "eat",
+      "lat": 40.7506295,
+      "lng": -74.1632855,
+      "note": "$$ — East Newark NJ — Lista de Vicky 🦔",
+      "source": "vicky-list",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Tops+Diner+NYC",
+      "hours": null,
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "nyc-haven",
+      "name": "Haven",
+      "list": "nyc",
+      "tag": "eat",
+      "lat": 40.8134,
+      "lng": -73.9756,
+      "note": "American $$$ — Edgewater NJ (ubicación aprox) — Lista de Vicky 🦔",
+      "source": "vicky-list",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Haven+NYC",
+      "hours": null,
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "nyc-marthas-hoboken",
+      "name": "Martha's",
+      "list": "nyc",
+      "tag": "eat",
+      "lat": 40.7506161,
+      "lng": -74.0252685,
+      "note": "Para los apps 😉 — Hoboken NJ — Lista de Vicky 🦔",
+      "source": "vicky-list",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Martha's+Hoboken+NJ",
+      "hours": null,
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "nyc-grand-vin",
+      "name": "Grand Vin",
+      "list": "nyc",
+      "tag": "eat",
+      "lat": 40.742,
+      "lng": -74.035,
+      "note": "Italiano — Hoboken NJ (por confirmar) — Lista de Vicky 🦔",
+      "source": "vicky-list",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Grand+Vin+Hoboken",
+      "hours": null,
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "nyc-razza",
+      "name": "Razza",
+      "list": "nyc",
+      "tag": "eat",
+      "lat": 40.7177283,
+      "lng": -74.044202,
+      "note": "Pizza — Jersey City NJ — Lista de Vicky 🦔",
+      "source": "vicky-list",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Razza+Jersey+City",
+      "hours": null,
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "cdmx-radisson-paraiso",
+      "name": "Radisson Paraíso",
+      "list": "cdmx",
+      "tag": "key",
+      "lat": 19.3018593,
+      "lng": -99.189533,
+      "note": "Punto clave sur",
+      "source": "martha",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Radisson+Paraiso+Hotel+Mexico+City",
+      "hours": null,
+      "tz": "America/Mexico_City",
+      "visited": false
+    },
+    {
+      "id": "cdmx-base-tlalpan",
+      "name": "Base Tlalpan",
+      "list": "cdmx",
+      "tag": "key",
+      "lat": 19.2764,
+      "lng": -99.1781,
+      "note": "Punto clave",
+      "source": "martha",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=19.2764,-99.1781",
+      "hours": null,
+      "tz": "America/Mexico_City",
+      "visited": false
+    },
+    {
+      "id": "nyc-base-fairview",
+      "name": "Base Fairview",
+      "list": "nyc",
+      "tag": "key",
+      "lat": 40.8206673,
+      "lng": -74.0001742,
+      "note": "Punto clave",
+      "source": "martha",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=40.8206673,-74.0001742",
+      "hours": null,
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "nyc-base-ridgefield",
+      "name": "Base Ridgefield",
+      "list": "nyc",
+      "tag": "key",
+      "lat": 40.8253497,
+      "lng": -73.9993481,
+      "note": "Punto clave",
+      "source": "martha",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=40.8253497,-73.9993481",
+      "hours": null,
       "tz": "America/New_York",
       "visited": false
     }

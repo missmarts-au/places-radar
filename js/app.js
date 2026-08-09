@@ -14,8 +14,8 @@ const CITY_CENTERS = {
   nyc: { lat: 40.7405, lng: -73.985, zoom: 13, label: 'New York', tz: 'America/New_York' },
 };
 
-const TAG_COLORS = { eat: '#e8590c', see: '#1971c2', walk: '#2f9e44' };
-const TAG_EMOJI = { eat: '🍽', see: '👀', walk: '🚶' };
+const TAG_COLORS = { eat: '#e8590c', see: '#1971c2', walk: '#2f9e44', key: '#9c36b5' };
+const TAG_EMOJI = { eat: '🍽', see: '👀', walk: '🚶', key: '⭐' };
 
 const state = {
   places: [],
