@@ -4,7 +4,7 @@
 // - static assets: stale-while-revalidate (instant load, refreshed in the
 //   background so code fixes reach the phone on the next visit)
 
-const CACHE = 'places-radar-v5';
+const CACHE = 'places-radar-v6';
 
 const SHELL = [
   './',

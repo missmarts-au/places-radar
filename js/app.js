@@ -509,16 +509,25 @@ function newPendingPlace({ name, lat, lng, note }) {
 
 let lastNominatim = 0;
 
-async function nominatimSearch(query, city) {
+async function nominatimSearch(q) {
   // be a polite Nominatim citizen: >=1 s between requests
   const wait = Math.max(0, 1100 - (Date.now() - lastNominatim));
   if (wait) await new Promise((r) => setTimeout(r, wait));
   lastNominatim = Date.now();
-  const q = `${query}, ${CITY_CENTERS[city].label}`;
   const url = `https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&q=${encodeURIComponent(q)}`;
   const res = await fetch(url, { headers: { Accept: 'application/json' } });
   if (!res.ok) throw new Error(`Nominatim ${res.status}`);
   return res.json();
+}
+
+// Full addresses break when we blindly append the city ("...US, New York"),
+// and bare names need the city to disambiguate. So: try the raw input first,
+// then retry with the city appended only if nothing came back.
+async function smartSearch(query, city) {
+  const results = await nominatimSearch(query);
+  if (results.length > 0) return results;
+  if (query.includes(',')) return results; // already a full address — appending won't help
+  return nominatimSearch(`${query}, ${CITY_CENTERS[city].label}`);
 }
 
 async function runAddSearch() {
@@ -546,15 +555,19 @@ async function runAddSearch() {
   }
 
   let results;
+  let failed = false;
   try {
-    results = await nominatimSearch(query, addCity.value);
+    results = await smartSearch(query, addCity.value);
   } catch {
-    addResults.innerHTML =
-      '<p class="tiny">Search failed (offline?). Tap below to save it as pending anyway.</p>';
+    failed = true;
     results = [];
   }
 
-  addResults.querySelectorAll('.result').forEach((b) => b.remove());
+  addResults.innerHTML = failed
+    ? '<p class="tiny">Search failed (offline?). You can still save it as pending below.</p>'
+    : results.length === 0
+      ? '<p class="tiny">No results found — you can save it as pending below and Claude will place it.</p>'
+      : '';
   for (const r of results) {
     const btn = document.createElement('button');
     btn.type = 'button';
