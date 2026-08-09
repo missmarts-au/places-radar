@@ -1259,6 +1259,91 @@
       },
       "tz": "America/New_York",
       "visited": false
+    },
+    {
+      "id": "nyc-911-memorial",
+      "name": "9/11 Memorial & Museum",
+      "list": "nyc",
+      "tag": "see",
+      "lat": 40.7115,
+      "lng": -74.0134,
+      "note": "Twin reflecting pools in the Tower footprints — free, no ticket. Museum is paid, Wed–Mon 09:00–19:00 (closed most Tuesdays), book ahead. The Oculus is right next door",
+      "source": "name",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=9%2F11+Memorial+%26+Museum+NYC",
+      "hours": {
+        "mon": [
+          [
+            "08:00",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "08:00",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "08:00",
+            "20:00"
+          ]
+        ],
+        "thu": [
+          [
+            "08:00",
+            "20:00"
+          ]
+        ],
+        "fri": [
+          [
+            "08:00",
+            "20:00"
+          ]
+        ],
+        "sat": [
+          [
+            "08:00",
+            "20:00"
+          ]
+        ],
+        "sun": [
+          [
+            "08:00",
+            "20:00"
+          ]
+        ]
+      },
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "nyc-statue-of-liberty",
+      "name": "Statue of Liberty",
+      "list": "nyc",
+      "tag": "see",
+      "lat": 40.6892,
+      "lng": -74.0445,
+      "note": "Liberty Island — only official ferry is Statue City Cruises from Battery Park (Castle Clinton), ~every 20-30 min from ~09:00, last boat out ~15:30. Book ahead; pedestal/crown sell out. Ticket includes Ellis Island",
+      "source": "name",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Statue+of+Liberty+Liberty+Island",
+      "hours": null,
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "nyc-castle-clinton-ferry",
+      "name": "Castle Clinton (Statue ferry dock)",
+      "list": "nyc",
+      "tag": "see",
+      "lat": 40.7035,
+      "lng": -74.017,
+      "note": "Departure point in Battery Park for the Statue of Liberty / Ellis Island ferry — arrive ~45 min early for airport-style security. Free alternative with great statue views: Staten Island Ferry from nearby Whitehall Terminal",
+      "source": "name",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Castle+Clinton+Battery+Park+NYC",
+      "hours": null,
+      "tz": "America/New_York",
+      "visited": false
     }
   ]
 }
