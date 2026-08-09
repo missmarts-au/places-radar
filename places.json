@@ -1827,6 +1827,162 @@
       },
       "tz": "America/New_York",
       "visited": false
+    },
+    {
+      "id": "nyc-gonzalez-y-gonzalez",
+      "name": "Gonzalez y Gonzalez",
+      "list": "nyc",
+      "tag": "eat",
+      "lat": 40.7254,
+      "lng": -73.9968,
+      "note": "Mexicano con salsa en vivo desde 1989 — clase gratis de salsa jueves 8:45pm, bandas en vivo jue, DJ vie-sáb. Happy hour diario 4-7pm. Dato de Nadia 💃",
+      "source": "nadia",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Gonzalez+y+Gonzalez+192+Mercer+St+NYC",
+      "hours": {
+        "thu": [
+          [
+            "16:00",
+            "02:00"
+          ]
+        ],
+        "fri": [
+          [
+            "16:00",
+            "04:00"
+          ]
+        ],
+        "sat": [
+          [
+            "16:00",
+            "04:00"
+          ]
+        ],
+        "sun": [
+          [
+            "16:00",
+            "02:00"
+          ]
+        ]
+      },
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "nyc-guantanamera",
+      "name": "Guantanamera",
+      "list": "nyc",
+      "tag": "eat",
+      "lat": 40.7666,
+      "lng": -73.9832,
+      "note": "Cubano estilo Vieja Habana — música en vivo diaria (8:30pm entre semana, 9:30pm vie-sáb), mojitos y puros los fines. \"Más como para señores\" según Nadia 😄 — 939 8th Ave, Midtown",
+      "source": "nadia",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Guantanamera+939+8th+Ave+NYC",
+      "hours": {
+        "mon": [
+          [
+            "16:00",
+            "00:00"
+          ]
+        ],
+        "tue": [
+          [
+            "16:00",
+            "00:00"
+          ]
+        ],
+        "wed": [
+          [
+            "12:00",
+            "00:00"
+          ]
+        ],
+        "thu": [
+          [
+            "12:00",
+            "00:00"
+          ]
+        ],
+        "fri": [
+          [
+            "12:00",
+            "01:00"
+          ]
+        ],
+        "sat": [
+          [
+            "12:00",
+            "01:00"
+          ]
+        ],
+        "sun": [
+          [
+            "12:00",
+            "00:00"
+          ]
+        ]
+      },
+      "tz": "America/New_York",
+      "visited": false
+    },
+    {
+      "id": "nyc-moma",
+      "name": "The Museum of Modern Art",
+      "list": "nyc",
+      "tag": "see",
+      "lat": 40.7614,
+      "lng": -73.9776,
+      "note": "MoMA — Starry Night (5o piso, ve directo al llegar), Monet, Frida. Compra boletos online; viernes 4-8pm entrada gratis (llega temprano)",
+      "source": "martha",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=MoMA+11+W+53rd+St+NYC",
+      "links": {
+        "ig": "https://www.instagram.com/themuseumofmodernart/"
+      },
+      "hours": {
+        "mon": [
+          [
+            "10:30",
+            "17:30"
+          ]
+        ],
+        "tue": [
+          [
+            "10:30",
+            "17:30"
+          ]
+        ],
+        "wed": [
+          [
+            "10:30",
+            "17:30"
+          ]
+        ],
+        "thu": [
+          [
+            "10:30",
+            "17:30"
+          ]
+        ],
+        "fri": [
+          [
+            "10:30",
+            "20:30"
+          ]
+        ],
+        "sat": [
+          [
+            "10:30",
+            "17:30"
+          ]
+        ],
+        "sun": [
+          [
+            "10:30",
+            "17:30"
+          ]
+        ]
+      },
+      "tz": "America/New_York",
+      "visited": false
     }
   ]
 }
