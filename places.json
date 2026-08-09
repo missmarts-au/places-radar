@@ -2405,6 +2405,34 @@
           ]
         ]
       }
+    },
+    {
+      "id": "cdmx-xochimilco",
+      "name": "Canales de Xochimilco",
+      "list": "cdmx",
+      "tag": "see",
+      "lat": 19.2578,
+      "lng": -99.0997,
+      "note": "Trajineras entre canales con mariachis y micheladas 🚣 — pin en Embarcadero Nuevo Nativitas (el más grande). Ve en la mañana para tranquilo o sábado en la tarde para fiesta; negocia precio por hora antes de subir",
+      "source": "martha",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Embarcadero+Nuevo+Nativitas+Xochimilco",
+      "hours": null,
+      "tz": "America/Mexico_City",
+      "visited": false
+    },
+    {
+      "id": "cdmx-arena-mexico",
+      "name": "Arena México",
+      "list": "cdmx",
+      "tag": "see",
+      "lat": 19.4229,
+      "lng": -99.1445,
+      "note": "Las luchas del CMLL 🤼 — funciones: martes 7:30pm, viernes 8:30pm (la mejor, Viernes Espectacular), domingo 5pm (familiar). Boletos en taquilla o Ticketmaster. Col. Doctores — llega y vete en taxi/Uber de noche",
+      "source": "martha",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Arena+Mexico+Dr+Lavista+189+CDMX",
+      "hours": null,
+      "tz": "America/Mexico_City",
+      "visited": false
     }
   ]
 }
