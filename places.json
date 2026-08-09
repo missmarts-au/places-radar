@@ -57,7 +57,10 @@
         ]
       },
       "tz": "America/Mexico_City",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/tacoselvilsito/"
+      }
     },
     {
       "id": "cdmx-museo-antropologia",
@@ -108,7 +111,10 @@
         ]
       },
       "tz": "America/Mexico_City",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/mnantropologia/"
+      }
     },
     {
       "id": "cdmx-chapultepec",
@@ -216,7 +222,10 @@
         ]
       },
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/katzsdeli/"
+      }
     },
     {
       "id": "nyc-the-met",
@@ -267,7 +276,10 @@
         ]
       },
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/metmuseum/"
+      }
     },
     {
       "id": "nyc-brooklyn-bridge",
@@ -332,7 +344,10 @@
         ]
       },
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/themorganlibrary/"
+      }
     },
     {
       "id": "nyc-papa-san",
@@ -346,7 +361,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Papa+San+NYC",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/papasannyc/"
+      }
     },
     {
       "id": "nyc-din-tai-fung",
@@ -360,7 +378,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Din+Tai+Fung+NYC",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/dintaifungusa/"
+      }
     },
     {
       "id": "nyc-thai-diner",
@@ -374,7 +395,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Thai+Diner+NYC",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/thaidiner/"
+      }
     },
     {
       "id": "nyc-amnh",
@@ -431,7 +455,10 @@
         ]
       },
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/amnh/"
+      }
     },
     {
       "id": "nyc-grand-banks",
@@ -445,7 +472,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Grand+Banks+NYC",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/grandbanksnyc/"
+      }
     },
     {
       "id": "nyc-seaglass-carousel",
@@ -459,7 +489,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=SeaGlass+Carousel+NYC",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/theseaglasscarousel/"
+      }
     },
     {
       "id": "nyc-bryant-park",
@@ -473,7 +506,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Bryant+Park+NYC",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/bryantparknyc/"
+      }
     },
     {
       "id": "nyc-bubbys",
@@ -487,7 +523,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Bubby's+NYC",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/bubbys/"
+      }
     },
     {
       "id": "nyc-skirt-steak",
@@ -501,7 +540,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Skirt+Steak+NYC",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/skirtsteak.nyc/"
+      }
     },
     {
       "id": "nyc-medium-rare",
@@ -515,7 +557,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Medium+Rare+NYC",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/mediumrarenewyork/"
+      }
     },
     {
       "id": "nyc-nowon",
@@ -529,7 +574,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Nowon+NYC",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/nowon.usa/"
+      }
     },
     {
       "id": "nyc-soothr",
@@ -543,7 +591,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Soothr+NYC",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/soothr_nyc/"
+      }
     },
     {
       "id": "nyc-12-matcha",
@@ -557,7 +608,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=12+Matcha+NYC",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/12.matcha/"
+      }
     },
     {
       "id": "nyc-ayada",
@@ -571,7 +625,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Ayada+Thai+NYC",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/ayada.thai.queens/"
+      }
     },
     {
       "id": "nyc-tre",
@@ -585,7 +642,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Tre+NYC",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/trenewyork/"
+      }
     },
     {
       "id": "nyc-w-union-square",
@@ -599,7 +659,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=W+New+York+Union+Square",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/wnyunionsquare/"
+      }
     },
     {
       "id": "nyc-panna-ii",
@@ -613,7 +676,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Panna+II+NYC",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/pannaiinyc/"
+      }
     },
     {
       "id": "nyc-hotel-hugo",
@@ -627,7 +693,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Hotel+Hugo+SoHo+NYC",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/azulontheroof/"
+      }
     },
     {
       "id": "nyc-corner-store",
@@ -641,7 +710,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=The+Corner+Store+NYC",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/thecornerstore/"
+      }
     },
     {
       "id": "nyc-hirams",
@@ -655,7 +727,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Hiram's+Roadstand+NYC",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/hiramsroadstand/"
+      }
     },
     {
       "id": "nyc-tops-diner",
@@ -669,7 +744,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Tops+Diner+NYC",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/thetopsdiner/"
+      }
     },
     {
       "id": "nyc-haven",
@@ -683,7 +761,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Haven+NYC",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/havenedgewaterrestaurant/"
+      }
     },
     {
       "id": "nyc-marthas-hoboken",
@@ -697,7 +778,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Martha's+Hoboken+NJ",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/marthashoboken/"
+      }
     },
     {
       "id": "nyc-grand-vin",
@@ -711,7 +795,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Grand+Vin+Hoboken",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/grandvinhoboken/"
+      }
     },
     {
       "id": "nyc-razza",
@@ -725,7 +812,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Razza+Jersey+City",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/razzanj/"
+      }
     },
     {
       "id": "cdmx-radisson-paraiso",
@@ -795,7 +885,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Bird+Dog+525+Hudson+St+NYC",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/birddog.nyc/"
+      }
     },
     {
       "id": "nyc-slicehaus",
@@ -809,7 +902,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Slicehaus+30+Carmine+St+NYC",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/slicehauspizzeria/"
+      }
     },
     {
       "id": "nyc-mokafe",
@@ -823,7 +919,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Mokafe+Times+Square+NYC",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/mymokafe/"
+      }
     },
     {
       "id": "nyc-bar-bonobo",
@@ -837,7 +936,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Bar+Bonobo+184+8th+Ave+NYC",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/barbonobonyc/"
+      }
     },
     {
       "id": "nyc-motek-flatiron",
@@ -851,7 +953,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Motek+928+Broadway+NYC",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/motekcafe/"
+      }
     },
     {
       "id": "nyc-motek-west-village",
@@ -865,7 +970,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Motek+184+Bleecker+St+NYC",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/motekcafe/"
+      }
     },
     {
       "id": "nyc-yesterdays",
@@ -879,7 +987,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Yesterdays+157+Bleecker+St+NYC",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/yesterdays/"
+      }
     },
     {
       "id": "nyc-ten11",
@@ -893,7 +1004,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Ten11+19+W+31st+St+NYC",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/ten11nomad/"
+      }
     },
     {
       "id": "nyc-boschetto",
@@ -907,7 +1021,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Boschetto+111+Grove+St+Montclair+NJ",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/boschettonj/"
+      }
     },
     {
       "id": "nyc-netties",
@@ -921,7 +1038,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Netties+220-03+Hempstead+Ave+Queens+Village",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/netties.house.of.spaghetti/"
+      }
     },
     {
       "id": "nyc-concourse-club",
@@ -935,7 +1055,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Concourse+Club+Wood-Ridge+NJ",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/concourseclub/"
+      }
     },
     {
       "id": "nyc-boomerang-bites",
@@ -949,7 +1072,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Boomerang+Bites+152+Newark+St+Hoboken",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/boomerangbites/"
+      }
     },
     {
       "id": "cdmx-piramide-sol",
@@ -977,7 +1103,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=La+Gruta+Teotihuacan",
       "hours": null,
       "tz": "America/Mexico_City",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/lagrutamx/"
+      }
     },
     {
       "id": "cdmx-frida-kahlo",
@@ -991,7 +1120,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Museo+Frida+Kahlo+Coyoacan",
       "hours": null,
       "tz": "America/Mexico_City",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/museofridakahlo/"
+      }
     },
     {
       "id": "cdmx-bellas-artes",
@@ -1005,7 +1137,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Palacio+de+Bellas+Artes+CDMX",
       "hours": null,
       "tz": "America/Mexico_City",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/palaciooficial/"
+      }
     },
     {
       "id": "cdmx-castillo-chapultepec",
@@ -1019,7 +1154,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Castillo+de+Chapultepec",
       "hours": null,
       "tz": "America/Mexico_City",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/museodehistoria/"
+      }
     },
     {
       "id": "cdmx-angel",
@@ -1061,7 +1199,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Tacos+Charly+Oficial+Av+San+Fernando+201+Tlalpan",
       "hours": null,
       "tz": "America/Mexico_City",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/tacoscharlyoficial/"
+      }
     },
     {
       "id": "nyc-oxomoco",
@@ -1075,7 +1216,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Oxomoco+Greenpoint+Brooklyn",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/_oxomoco_/"
+      }
     },
     {
       "id": "nyc-tmrrw",
@@ -1132,7 +1276,10 @@
         ]
       },
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/see.you.tmrw/"
+      }
     },
     {
       "id": "nyc-times-square",
@@ -1160,7 +1307,10 @@
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Rockefeller+Center+NYC",
       "hours": null,
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/rockefellercenter/"
+      }
     },
     {
       "id": "nyc-charging-bull",
@@ -1301,7 +1451,10 @@
         ]
       },
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/thecarnegieclubnyc/"
+      }
     },
     {
       "id": "nyc-911-memorial",
@@ -1358,7 +1511,10 @@
         ]
       },
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/911memorial/"
+      }
     },
     {
       "id": "nyc-statue-of-liberty",
@@ -1400,7 +1556,10 @@
       "lng": -74.0131,
       "note": "Mirador en el piso 100+ de One WTC — al lado del 9/11 Memorial, combínalos. Compra boletos con anticipación",
       "gmaps": "https://www.google.com/maps/search/?api=1&query=One+World+Observatory+NYC",
-      "hours": null
+      "hours": null,
+      "links": {
+        "ig": "https://www.instagram.com/oneworldnyc/"
+      }
     },
     {
       "list": "nyc",
@@ -1414,7 +1573,10 @@
       "lng": -73.9788,
       "note": "Mirador de espejos junto a Grand Central — el más espectacular de la ciudad, mejor al atardecer. Boletos con anticipación",
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Summit+One+Vanderbilt+NYC",
-      "hours": null
+      "hours": null,
+      "links": {
+        "ig": "https://www.instagram.com/summitov/"
+      }
     },
     {
       "list": "nyc",
@@ -1485,7 +1647,10 @@
       "lng": -74.008,
       "note": "Parque elevado sobre vías de tren — de Gansevoort St (pin) a Hudson Yards, ~2.3 km. Abre 7:00, cierre según temporada (~22:00 verano). Combina con Chelsea Market",
       "gmaps": "https://www.google.com/maps/search/?api=1&query=The+High+Line+Gansevoort+entrance+NYC",
-      "hours": null
+      "hours": null,
+      "links": {
+        "ig": "https://www.instagram.com/highlinenyc/"
+      }
     },
     {
       "list": "nyc",
@@ -1499,7 +1664,10 @@
       "lng": -74.01,
       "note": "Parque sobre pilotes en el Hudson (Pier 55) — gratis, cerca del extremo sur del High Line. Cierre según temporada",
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Little+Island+Pier+55+NYC",
-      "hours": null
+      "hours": null,
+      "links": {
+        "ig": "https://www.instagram.com/littleislandnyc/"
+      }
     },
     {
       "list": "nyc",
