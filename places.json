@@ -1865,7 +1865,10 @@
         ]
       },
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/gygnyc/"
+      }
     },
     {
       "id": "nyc-guantanamera",
@@ -1922,7 +1925,10 @@
         ]
       },
       "tz": "America/New_York",
-      "visited": false
+      "visited": false,
+      "links": {
+        "ig": "https://www.instagram.com/guantanamerany/"
+      }
     },
     {
       "id": "nyc-moma",
