@@ -173,9 +173,14 @@ function openBadge(p) {
 }
 
 function renderList() {
+  // Walking (GPS fix): nearest first. Planning (no GPS): alphabetical.
   const places = activePlaces()
     .map((p) => ({ p, mins: minutesTo(p) }))
-    .sort((a, b) => (a.mins ?? 9e9) - (b.mins ?? 9e9));
+    .sort((a, b) =>
+      state.position
+        ? (a.mins ?? 9e9) - (b.mins ?? 9e9)
+        : a.p.name.localeCompare(b.p.name, 'es', { sensitivity: 'base' })
+    );
 
   sheetTitle.textContent = state.position
     ? `Nearby places — ${places.length}`
