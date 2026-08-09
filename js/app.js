@@ -111,11 +111,15 @@ function minutesTo(p) {
 
 // ---------- markers ----------
 
+function esc(s) {
+  return String(s ?? '').replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
+}
+
 function popupHtml(p) {
   const mins = minutesTo(p);
   const minsLine = mins === null ? '' : `<br>🚶 ${mins} min walk`;
-  return `<strong>${p.name}</strong><br>${p.note || ''}${minsLine}<br>
-    <a href="${p.gmaps}" target="_blank" rel="noopener">Open in Google Maps</a>`;
+  return `<strong>${esc(p.name)}</strong><br>${esc(p.note)}${minsLine}<br>
+    <a href="${esc(p.gmaps)}" target="_blank" rel="noopener">Open in Google Maps</a>`;
 }
 
 function renderMarkers() {
@@ -168,17 +172,17 @@ function renderList() {
       <span class="dot${p.pending ? ' pending' : ''}"
         style="${p.pending ? '' : `background:${visited ? '#adb5bd' : TAG_COLORS[p.tag]}`}"></span>
       <div class="body">
-        <div class="name">${TAG_EMOJI[p.tag] || ''} ${p.name}${
+        <div class="name">${TAG_EMOJI[p.tag] || ''} ${esc(p.name)}${
           p.pending ? ' <em>(pending)</em>' : ''
         }</div>
         <div class="meta">${openBadge(p)}${
           p.pending ? ' · added on the go' : ''
         }</div>
-        ${p.note ? `<div class="note">${p.note}</div>` : ''}
+        ${p.note ? `<div class="note">${esc(p.note)}</div>` : ''}
       </div>
       <div class="actions">
         <span class="dist">${mins === null ? '—' : `${mins} min`}</span>
-        <a href="${p.gmaps}" target="_blank" rel="noopener">Maps ↗</a>
+        <a href="${esc(p.gmaps)}" target="_blank" rel="noopener">Maps ↗</a>
         <label><input type="checkbox" data-visited="${p.id}" ${
           visited ? 'checked' : ''
         }> visited</label>
@@ -234,7 +238,7 @@ window.__alertLog = []; // inspected by pre-trip sim tests
 function showAlert(p, mins) {
   window.__alertLog.push({ id: p.id, name: p.name, mins });
   console.log(`[ALERT] ${p.name} — ${mins} min`);
-  alertText.innerHTML = `${state.sim ? '<span class="sim-chip">SIM</span>' : ''}📍 <strong>${p.name}</strong> is ${mins} min walk away!`;
+  alertText.innerHTML = `${state.sim ? '<span class="sim-chip">SIM</span>' : ''}📍 <strong>${esc(p.name)}</strong> is ${mins} min walk away!`;
   alertBanner.hidden = false;
   alertTarget = p;
   beep();

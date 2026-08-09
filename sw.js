@@ -1,6 +1,8 @@
 // Places Radar service worker.
-// Shell: cache-first. places.json: network-first with cache fallback,
-// so the list keeps working in a metro dead zone but updates when online.
+// - navigations + places.json: network-first with cache fallback (updates
+//   arrive whenever there's signal; metro dead zones fall back to cache)
+// - static assets: stale-while-revalidate (instant load, refreshed in the
+//   background so code fixes reach the phone on the next visit)
 
 const CACHE = 'places-radar-v1';
 
@@ -36,24 +38,42 @@ self.addEventListener('activate', (e) => {
   );
 });
 
+function networkFirst(request, fallbackUrl) {
+  return fetch(request)
+    .then((res) => {
+      const copy = res.clone();
+      caches.open(CACHE).then((c) => c.put(request, copy));
+      return res;
+    })
+    .catch(() =>
+      caches.match(request).then((hit) => hit || caches.match(fallbackUrl))
+    );
+}
+
+function staleWhileRevalidate(request) {
+  return caches.match(request).then((hit) => {
+    const refresh = fetch(request)
+      .then((res) => {
+        const copy = res.clone();
+        caches.open(CACHE).then((c) => c.put(request, copy));
+        return res;
+      })
+      .catch(() => hit);
+    return hit || refresh;
+  });
+}
+
 self.addEventListener('fetch', (e) => {
   const url = new URL(e.request.url);
   if (url.origin !== location.origin) return; // tiles, Nominatim: browser default
 
-  if (url.pathname.endsWith('places.json')) {
-    e.respondWith(
-      fetch(e.request)
-        .then((res) => {
-          const copy = res.clone();
-          caches.open(CACHE).then((c) => c.put(e.request, copy));
-          return res;
-        })
-        .catch(() => caches.match(e.request))
-    );
+  if (e.request.mode === 'navigate') {
+    e.respondWith(networkFirst(e.request, './index.html'));
     return;
   }
-
-  e.respondWith(
-    caches.match(e.request).then((hit) => hit || fetch(e.request))
-  );
+  if (url.pathname.endsWith('places.json')) {
+    e.respondWith(networkFirst(e.request));
+    return;
+  }
+  e.respondWith(staleWhileRevalidate(e.request));
 });
