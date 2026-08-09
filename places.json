@@ -122,6 +122,27 @@
       "hours": null,
       "tz": "America/New_York",
       "visited": false
+    },
+    {
+      "id": "nyc-morgan-library-museum",
+      "name": "The Morgan Library & Museum",
+      "list": "nyc",
+      "tag": "see",
+      "lat": 40.7492,
+      "lng": -73.9814,
+      "note": "J.P. Morgan's stunning study & library — illuminated manuscripts, rare books, and rotating exhibitions on Madison Ave",
+      "source": "name",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=The+Morgan+Library+and+Museum+NYC",
+      "hours": {
+        "tue": [["10:30", "17:00"]],
+        "wed": [["10:30", "17:00"]],
+        "thu": [["10:30", "17:00"]],
+        "fri": [["10:30", "19:00"]],
+        "sat": [["10:00", "18:00"]],
+        "sun": [["11:00", "18:00"]]
+      },
+      "tz": "America/New_York",
+      "visited": false
     }
   ]
 }
