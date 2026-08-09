@@ -18,11 +18,24 @@ const TAG_COLORS = {
   eat: '#e8590c',
   sweet: '#d6336c',
   drink: '#7048e8',
+  salsa: '#e03131',
   see: '#1971c2',
   walk: '#2f9e44',
   key: '#f59f00',
 };
-const TAG_EMOJI = { eat: '🍽', sweet: '🍰', drink: '🍸', see: '👀', walk: '🚶', key: '⭐' };
+const TAG_EMOJI = { eat: '🍽', sweet: '🍰', drink: '🍸', salsa: '💃', see: '👀', walk: '🚶', key: '⭐' };
+
+// a place may carry several tags (e.g. eat + salsa); tags[0] drives the color
+function normTags(p) {
+  return { ...p, tags: Array.isArray(p.tags) && p.tags.length ? p.tags : [p.tag] };
+}
+
+function fold(s) {
+  return String(s ?? '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '');
+}
 
 const state = {
   places: [],
@@ -34,7 +47,8 @@ const state = {
   alertedIds: new Set(),
   markers: new Map(), // id -> Leaflet marker
   sim: false,
-  pending: JSON.parse(localStorage.getItem('pendingAdds') || '[]'),
+  pending: JSON.parse(localStorage.getItem('pendingAdds') || '[]').map((p) => normTags(p)),
+  search: '',
 };
 
 // ---------- map ----------
@@ -96,17 +110,19 @@ async function loadPlaces() {
   try {
     const res = await fetch('places.json', { cache: 'no-cache' });
     const data = await res.json();
-    state.places = data.places;
+    state.places = data.places.map((p) => normTags(p));
   } catch {
     state.places = []; // offline before first cache — quick-adds still work
   }
 }
 
 function activePlaces() {
+  const q = fold(state.search.trim());
   return [...state.places, ...state.pending].filter(
     (p) =>
       p.list === state.city &&
-      (state.tags.size === 0 || state.tags.has(p.tag))
+      (state.tags.size === 0 || p.tags.some((t) => state.tags.has(t))) &&
+      (!q || fold(`${p.name} ${p.note}`).includes(q))
   );
 }
 
@@ -156,7 +172,7 @@ function renderMarkers() {
   for (const p of activePlaces()) {
     if (p.lat == null) continue; // unresolved pending adds have no pin yet
     const visited = state.visited.has(p.id);
-    const color = visited ? '#adb5bd' : TAG_COLORS[p.tag] || '#495057';
+    const color = visited ? '#adb5bd' : TAG_COLORS[p.tags[0]] || '#495057';
     const icon = L.divIcon({
       className: 'num-pin-wrap',
       html: `<div class="num-pin${p.pending ? ' pending' : ''}" style="background:${color}">${state.nums.get(p.id) ?? ''}</div>`,
@@ -203,9 +219,9 @@ function renderList() {
     card.className = 'card' + (visited ? ' visited' : '');
     card.innerHTML = `
       <span class="num-chip${p.pending ? ' pending' : ''}"
-        style="background:${visited ? '#adb5bd' : TAG_COLORS[p.tag] || '#495057'}">${state.nums.get(p.id) ?? '·'}</span>
+        style="background:${visited ? '#adb5bd' : TAG_COLORS[p.tags[0]] || '#495057'}">${state.nums.get(p.id) ?? '·'}</span>
       <div class="body">
-        <div class="name">${TAG_EMOJI[p.tag] || ''} ${esc(p.name)}${
+        <div class="name">${p.tags.map((t) => TAG_EMOJI[t] || '').join('')} ${esc(p.name)}${
           p.pending ? ' <em>(pending)</em>' : ''
         }</div>
         <div class="meta">${openBadge(p)}${
@@ -469,6 +485,13 @@ document.getElementById('sheetHandle').addEventListener('click', () => {
   sheet.classList.toggle('collapsed');
 });
 
+const searchBox = document.getElementById('searchBox');
+searchBox.addEventListener('input', () => {
+  state.search = searchBox.value;
+  sheet.classList.remove('collapsed'); // typing means she wants the list
+  renderAll();
+});
+
 syncChips(); // reflect persisted filters
 
 function renderAll() {
@@ -511,6 +534,7 @@ function newPendingPlace({ name, lat, lng, note }) {
     name,
     list: city,
     tag: addTag.value,
+    tags: [addTag.value],
     lat: lat ?? null,
     lng: lng ?? null,
     note: note || '',

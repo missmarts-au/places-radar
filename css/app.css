@@ -148,6 +148,18 @@ body {
 }
 .grabber { width: 36px; height: 4px; border-radius: 2px; background: #ced4da; }
 
+.search-row { padding: 0 10px 6px; }
+.search-row input {
+  width: 100%;
+  font-size: 15px;
+  padding: 8px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  background: var(--card);
+  color: var(--ink);
+}
+.sheet.collapsed .search-row { display: none; }
+
 .sheet-body { overflow-y: auto; padding: 0 10px calc(env(safe-area-inset-bottom, 0px) + 8px); }
 
 .card {

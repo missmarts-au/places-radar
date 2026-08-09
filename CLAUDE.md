@@ -34,7 +34,8 @@ Martha will paste screenshots (IG/TikTok posts, listicles), Google Maps links
 ## Rules
 
 - `id` = `<list>-<kebab-name>`, unique across the file
-- `tag` ∈ `eat` | `sweet` | `drink` | `see` | `walk` | `key` — eat 🍽 = meals, sweet 🍰 = desserts/coffee/bakeries, drink 🍸 = bars/rooftops/happy hours, see 👀 = sights, walk 🚶 = parks/strolls, key ⭐ = orientation landmarks / home bases. Cuisine type and price ($/$$/$$$) go in `note`.
+- `tag` ∈ `eat` | `sweet` | `drink` | `salsa` | `see` | `walk` | `key` — eat 🍽 = meals, sweet 🍰 = desserts/coffee/bakeries, drink 🍸 = bars/rooftops/happy hours, salsa 💃 = dancing spots/events, see 👀 = sights, walk 🚶 = parks/strolls, key ⭐ = orientation landmarks / home bases. Cuisine type and price ($/$$/$$$) go in `note`.
+- Optional `"tags": ["eat", "salsa"]` for places that are two things at once (restaurant with live salsa, etc.). First element = primary (drives pin color) and must equal `tag`. Omit for single-tag places.
 - Optional `"links": {"ig": "https://instagram.com/...", "tiktok": "https://tiktok.com/@..."}` — rendered as IG ↗ / TikTok ↗ on the card. Only add links Martha/Vicky provide or that you have verified; never guess handles.
 - **Privacy rule for `key` entries:** this repo is PUBLIC. Personal bases (Airbnbs, friends'/family homes) get NEUTRAL names ("Base Fairview"), generic notes ("Punto clave"), and NEVER a street address in name/note. Public hotels may use their real name.
 - `note` = why it was saved + where it came from — this shows on the card, make it useful

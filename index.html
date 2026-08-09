@@ -30,6 +30,7 @@
       <button class="chip" data-tag="eat">🍽 Eat</button>
       <button class="chip" data-tag="sweet">🍰 Sweet</button>
       <button class="chip" data-tag="drink">🍸 Drink</button>
+      <button class="chip" data-tag="salsa">💃 Salsa</button>
       <button class="chip" data-tag="see">👀 See</button>
       <button class="chip" data-tag="walk">🚶 Walk</button>
       <button class="chip" data-tag="key">⭐ Key</button>
@@ -58,6 +59,9 @@
       <span class="grabber"></span>
       <span id="sheetTitle">Nearby places</span>
     </button>
+    <div class="search-row">
+      <input type="search" id="searchBox" placeholder="🔍 Search your places…" autocomplete="off">
+    </div>
     <div class="sheet-body" id="placeList"></div>
     <div class="sheet-footer" id="pendingFooter" hidden>
       <button id="copyPending">📋 Copy pending for Claude</button>
@@ -76,6 +80,7 @@
           <option value="eat">🍽 Eat</option>
           <option value="sweet">🍰 Sweet</option>
           <option value="drink">🍸 Drink</option>
+          <option value="salsa">💃 Salsa</option>
           <option value="see">👀 See</option>
           <option value="walk">🚶 Walk</option>
           <option value="key">⭐ Key</option>
