@@ -188,6 +188,20 @@ body {
   font-weight: 600;
 }
 
+.locate-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background: #fff;
+  color: var(--teal);
+  font-size: 20px;
+  line-height: 1;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  margin-bottom: 6px;
+}
+
 .fab {
   position: fixed;
   right: 14px;

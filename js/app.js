@@ -14,8 +14,15 @@ const CITY_CENTERS = {
   nyc: { lat: 40.7405, lng: -73.985, zoom: 13, label: 'New York', tz: 'America/New_York' },
 };
 
-const TAG_COLORS = { eat: '#e8590c', see: '#1971c2', walk: '#2f9e44', key: '#9c36b5' };
-const TAG_EMOJI = { eat: '🍽', see: '👀', walk: '🚶', key: '⭐' };
+const TAG_COLORS = {
+  eat: '#e8590c',
+  sweet: '#d6336c',
+  drink: '#7048e8',
+  see: '#1971c2',
+  walk: '#2f9e44',
+  key: '#f59f00',
+};
+const TAG_EMOJI = { eat: '🍽', sweet: '🍰', drink: '🍸', see: '👀', walk: '🚶', key: '⭐' };
 
 const state = {
   places: [],
@@ -115,11 +122,21 @@ function esc(s) {
   return String(s ?? '').replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 }
 
+function socialLinks(p, sep = ' · ') {
+  const out = [];
+  if (p.links?.ig) out.push(`<a href="${esc(p.links.ig)}" target="_blank" rel="noopener">IG ↗</a>`);
+  if (p.links?.tiktok) out.push(`<a href="${esc(p.links.tiktok)}" target="_blank" rel="noopener">TikTok ↗</a>`);
+  return out.join(sep);
+}
+
 function popupHtml(p) {
   const mins = minutesTo(p);
   const minsLine = mins === null ? '' : `<br>🚶 ${mins} min walk`;
+  const social = socialLinks(p);
   return `<strong>${esc(p.name)}</strong><br>${esc(p.note)}${minsLine}<br>
-    <a href="${esc(p.gmaps)}" target="_blank" rel="noopener">Open in Google Maps</a>`;
+    <a href="${esc(p.gmaps)}" target="_blank" rel="noopener">Open in Google Maps</a>${
+      social ? '<br>' + social : ''
+    }`;
 }
 
 function renderMarkers() {
@@ -183,6 +200,7 @@ function renderList() {
       <div class="actions">
         <span class="dist">${mins === null ? '—' : `${mins} min`}</span>
         <a href="${esc(p.gmaps)}" target="_blank" rel="noopener">Maps ↗</a>
+        ${socialLinks(p, ' ')}
         <label><input type="checkbox" data-visited="${p.id}" ${
           visited ? 'checked' : ''
         }> visited</label>
@@ -301,12 +319,15 @@ function onPosition(lat, lng, accuracy) {
   checkAlerts();
 }
 
+let geoWatchId = null;
+
 function startGeolocation() {
   if (!('geolocation' in navigator)) {
     gpsHint.hidden = false;
     return;
   }
-  navigator.geolocation.watchPosition(
+  if (geoWatchId !== null) return;
+  geoWatchId = navigator.geolocation.watchPosition(
     (pos) =>
       onPosition(pos.coords.latitude, pos.coords.longitude, pos.coords.accuracy),
     () => {
@@ -315,6 +336,44 @@ function startGeolocation() {
     { enableHighAccuracy: true, maximumAge: 5000, timeout: 15000 }
   );
 }
+
+// "My location" button (like Google Maps): recenters, and re-asks for GPS
+// permission on tap — the user gesture lets iOS show the prompt again.
+function locateMe() {
+  if (state.position) {
+    map.setView([state.position.lat, state.position.lng], 16);
+  }
+  if (!('geolocation' in navigator)) return;
+  navigator.geolocation.getCurrentPosition(
+    (pos) => {
+      onPosition(pos.coords.latitude, pos.coords.longitude, pos.coords.accuracy);
+      map.setView([pos.coords.latitude, pos.coords.longitude], 16);
+      startGeolocation();
+    },
+    () => {
+      if (!state.position) gpsHint.hidden = false;
+    },
+    { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
+  );
+}
+
+const LocateControl = L.Control.extend({
+  options: { position: 'bottomright' },
+  onAdd() {
+    const btn = L.DomUtil.create('button', 'locate-btn');
+    btn.type = 'button';
+    btn.title = 'My location';
+    btn.setAttribute('aria-label', 'My location');
+    btn.textContent = '◉';
+    L.DomEvent.disableClickPropagation(btn);
+    L.DomEvent.on(btn, 'click', (e) => {
+      L.DomEvent.stop(e);
+      locateMe();
+    });
+    return btn;
+  },
+});
+new LocateControl().addTo(map);
 
 // ---------- controls ----------
 
