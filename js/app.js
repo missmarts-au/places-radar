@@ -27,7 +27,7 @@ const TAG_EMOJI = { eat: '🍽', sweet: '🍰', drink: '🍸', see: '👀', walk
 const state = {
   places: [],
   city: localStorage.getItem('city') || 'cdmx',
-  tag: localStorage.getItem('tag') || 'all',
+  tags: new Set(JSON.parse(localStorage.getItem('tags') || '[]')), // empty = show all
   radiusMin: Number(localStorage.getItem('radiusMin') || 15),
   visited: new Set(JSON.parse(localStorage.getItem('visited') || '[]')),
   position: null, // {lat, lng, accuracy}
@@ -105,7 +105,8 @@ async function loadPlaces() {
 function activePlaces() {
   return [...state.places, ...state.pending].filter(
     (p) =>
-      p.list === state.city && (state.tag === 'all' || p.tag === state.tag)
+      p.list === state.city &&
+      (state.tags.size === 0 || state.tags.has(p.tag))
   );
 }
 
@@ -387,14 +388,23 @@ citySelect.addEventListener('change', () => {
   renderAll();
 });
 
+// Multi-select filters: tap chips to combine (eat + see, ...). "All" clears.
+function syncChips() {
+  document.querySelectorAll('.chip').forEach((c) => {
+    const t = c.dataset.tag;
+    c.classList.toggle('active', t === 'all' ? state.tags.size === 0 : state.tags.has(t));
+  });
+}
+
 document.getElementById('tagChips').addEventListener('click', (e) => {
   const btn = e.target.closest('.chip');
   if (!btn) return;
-  state.tag = btn.dataset.tag;
-  localStorage.setItem('tag', state.tag);
-  document
-    .querySelectorAll('.chip')
-    .forEach((c) => c.classList.toggle('active', c === btn));
+  const t = btn.dataset.tag;
+  if (t === 'all') state.tags.clear();
+  else if (state.tags.has(t)) state.tags.delete(t);
+  else state.tags.add(t);
+  localStorage.setItem('tags', JSON.stringify([...state.tags]));
+  syncChips();
   renderAll();
 });
 
@@ -444,10 +454,7 @@ document.getElementById('sheetHandle').addEventListener('click', () => {
   sheet.classList.toggle('collapsed');
 });
 
-// reflect persisted tag in chips (without re-triggering render)
-document.querySelectorAll('.chip').forEach((c) => {
-  c.classList.toggle('active', c.dataset.tag === state.tag);
-});
+syncChips(); // reflect persisted filters
 
 function renderAll() {
   renderMarkers();
