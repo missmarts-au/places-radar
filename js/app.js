@@ -708,7 +708,18 @@ async function boot() {
 boot();
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js').catch(() => {
-    /* offline caching is a nice-to-have; the app works without it */
+  navigator.serviceWorker
+    .register('sw.js')
+    .then((reg) => reg.update())
+    .catch(() => {
+      /* offline caching is a nice-to-have; the app works without it */
+    });
+  // When a new version takes over mid-session, reload once so updates
+  // apply themselves — no more "close and reopen twice".
+  let reloaded = false;
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (reloaded) return;
+    reloaded = true;
+    location.reload();
   });
 }
