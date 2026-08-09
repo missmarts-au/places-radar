@@ -1599,6 +1599,66 @@
       "note": "Salida de Statue City Cruises desde NJ (terminal histórica CRRNJ, Jersey City) — mismos boletos que Battery Park pero con MUCHO menos fila, y hay estacionamiento. La opción más práctica desde las bases de NJ",
       "gmaps": "https://www.google.com/maps/search/?api=1&query=Statue+City+Cruises+Liberty+State+Park+Jersey+City",
       "hours": null
+    },
+    {
+      "id": "nyc-jarana",
+      "name": "Jarana",
+      "list": "nyc",
+      "tag": "eat",
+      "lat": 40.8093,
+      "lng": -74.069,
+      "note": "Peruano del chef Gastón Acurio 🇵🇪 con pisco bar — 3er piso del American Dream mall, 1 American Dream Way, East Rutherford NJ",
+      "source": "martha",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Jarana+American+Dream+East+Rutherford+NJ",
+      "links": {
+        "ig": "https://www.instagram.com/jarana.nj/"
+      },
+      "hours": {
+        "mon": [
+          [
+            "12:00",
+            "21:00"
+          ]
+        ],
+        "tue": [
+          [
+            "12:00",
+            "21:00"
+          ]
+        ],
+        "wed": [
+          [
+            "12:00",
+            "21:00"
+          ]
+        ],
+        "thu": [
+          [
+            "12:00",
+            "21:00"
+          ]
+        ],
+        "fri": [
+          [
+            "12:00",
+            "22:00"
+          ]
+        ],
+        "sat": [
+          [
+            "12:00",
+            "22:00"
+          ]
+        ],
+        "sun": [
+          [
+            "12:00",
+            "21:00"
+          ]
+        ]
+      },
+      "tz": "America/New_York",
+      "visited": false
     }
   ]
 }
