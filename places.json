@@ -2433,6 +2433,134 @@
       "hours": null,
       "tz": "America/Mexico_City",
       "visited": false
+    },
+    {
+      "list": "nyc",
+      "source": "martha",
+      "tz": "America/New_York",
+      "visited": false,
+      "id": "nyc-king-dumplings",
+      "name": "King Dumplings",
+      "tag": "eat",
+      "lat": 40.7146,
+      "lng": -73.9909,
+      "note": "Dumplings hechos a mano baratísimos ($) — 74 Hester St, Chinatown. Solo efectivo. Abre ~9am, cierra ~10pm",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=King+Dumplings+74+Hester+St+New+York+NY",
+      "hours": null
+    },
+    {
+      "list": "nyc",
+      "source": "martha",
+      "tz": "America/New_York",
+      "visited": false,
+      "id": "nyc-hay-hay-roasted",
+      "name": "Hay Hay Roasted",
+      "tag": "eat",
+      "lat": 40.7157,
+      "lng": -73.9985,
+      "note": "Pato pekinés y carnes rostizadas ($$) — 81 Mott St, Chinatown, cerca de Wo Hop y Mei Lai Wah. Solo efectivo",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Hay+Hay+Roasted+81+Mott+St+New+York+NY",
+      "links": {
+        "ig": "https://www.instagram.com/hayhayroasted/"
+      },
+      "hours": {
+        "mon": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ]
+      }
+    },
+    {
+      "list": "nyc",
+      "source": "martha",
+      "tz": "America/New_York",
+      "visited": false,
+      "id": "nyc-wah-fung",
+      "name": "Wah Fung No.1 Fast Food",
+      "tag": "eat",
+      "lat": 40.7176,
+      "lng": -73.9939,
+      "note": "El roast pork over rice legendario ($) — 79 Chrystie St, Chinatown. Solo efectivo, fila rápida. Cierra lunes",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Wah+Fung+No.1+Fast+Food+79+Chrystie+St+New+York+NY",
+      "links": {
+        "ig": "https://www.instagram.com/wahfungno1/"
+      },
+      "hours": {
+        "tue": [
+          [
+            "09:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "19:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "19:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "19:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "19:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "19:00"
+          ]
+        ]
+      }
     }
   ]
 }
