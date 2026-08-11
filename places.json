@@ -2741,6 +2741,114 @@
           ]
         ]
       }
+    },
+    {
+      "list": "cdmx",
+      "source": "martha",
+      "tz": "America/Mexico_City",
+      "visited": false,
+      "id": "cdmx-basilica-guadalupe",
+      "name": "Basílica de Guadalupe",
+      "tag": "see",
+      "lat": 19.4847,
+      "lng": -99.1175,
+      "note": "La Villa 🙏 — la Basílica nueva con la tilma de la Virgen (banda transportadora frente al ayate), la Antigua Basílica inclinada y la subida al Cerrito del Tepeyac. Metro La Villa-Basílica línea 6",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Basilica+de+Guadalupe+CDMX",
+      "hours": {
+        "mon": [
+          [
+            "06:00",
+            "21:00"
+          ]
+        ],
+        "tue": [
+          [
+            "06:00",
+            "21:00"
+          ]
+        ],
+        "wed": [
+          [
+            "06:00",
+            "21:00"
+          ]
+        ],
+        "thu": [
+          [
+            "06:00",
+            "21:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:00",
+            "21:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:00",
+            "21:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:00",
+            "21:00"
+          ]
+        ]
+      }
+    },
+    {
+      "list": "cdmx",
+      "source": "martha",
+      "tz": "America/Mexico_City",
+      "visited": false,
+      "id": "cdmx-templo-mayor",
+      "name": "Templo Mayor",
+      "tag": "see",
+      "lat": 19.4348,
+      "lng": -99.1312,
+      "note": "Las ruinas del centro ceremonial mexica junto al Zócalo + museo (la Coyolxauhqui y los tzompantli). ~$210 general, domingo gratis para mexicanos. Combínalo con Zócalo y Bellas Artes",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Templo+Mayor+CDMX",
+      "hours": {
+        "tue": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ]
+      }
     }
   ]
 }
