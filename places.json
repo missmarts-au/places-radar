@@ -2986,6 +2986,66 @@
           ]
         ]
       }
+    },
+    {
+      "id": "nyc-los-tacos-no-1",
+      "name": "Los Tacos No.1",
+      "list": "nyc",
+      "tag": "eat",
+      "lat": 40.7425,
+      "lng": -74.0058,
+      "note": "Los mejores tacos de NYC 🌮 — pide la adobada en tortilla de maíz hecha a mano. Pin en el original dentro de Chelsea Market; también en Times Square (229 W 43rd), Grand Central, Hudson Yards y más",
+      "source": "ig-screenshot",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Los+Tacos+No+1+Chelsea+Market+NYC",
+      "links": {
+        "ig": "https://www.instagram.com/lostacos1/"
+      },
+      "hours": {
+        "mon": [
+          [
+            "11:00",
+            "22:00"
+          ]
+        ],
+        "tue": [
+          [
+            "11:00",
+            "22:00"
+          ]
+        ],
+        "wed": [
+          [
+            "11:00",
+            "22:00"
+          ]
+        ],
+        "thu": [
+          [
+            "11:00",
+            "22:00"
+          ]
+        ],
+        "fri": [
+          [
+            "11:00",
+            "22:00"
+          ]
+        ],
+        "sat": [
+          [
+            "11:00",
+            "22:00"
+          ]
+        ],
+        "sun": [
+          [
+            "11:00",
+            "21:00"
+          ]
+        ]
+      },
+      "tz": "America/New_York",
+      "visited": false
     }
   ]
 }
