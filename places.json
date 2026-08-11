@@ -2849,6 +2849,66 @@
           ]
         ]
       }
+    },
+    {
+      "id": "cdmx-el-califa-de-leon",
+      "name": "El Califa de León",
+      "list": "cdmx",
+      "tag": "eat",
+      "lat": 19.4384,
+      "lng": -99.1558,
+      "note": "La taquería del puestito con estrella Michelin (2024-2026) — pide la gaonera. Ribera de San Cosme 56, San Rafael. Solo efectivo, es un local chiquito de pie",
+      "source": "ig-screenshot",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=El+Califa+de+Leon+Ribera+de+San+Cosme+56+CDMX",
+      "links": {
+        "ig": "https://www.instagram.com/califadeleon/"
+      },
+      "hours": {
+        "mon": [
+          [
+            "11:00",
+            "02:00"
+          ]
+        ],
+        "tue": [
+          [
+            "11:00",
+            "02:00"
+          ]
+        ],
+        "wed": [
+          [
+            "11:00",
+            "02:00"
+          ]
+        ],
+        "thu": [
+          [
+            "11:00",
+            "02:00"
+          ]
+        ],
+        "fri": [
+          [
+            "11:00",
+            "02:00"
+          ]
+        ],
+        "sat": [
+          [
+            "11:00",
+            "02:00"
+          ]
+        ],
+        "sun": [
+          [
+            "11:00",
+            "02:00"
+          ]
+        ]
+      },
+      "tz": "America/Mexico_City",
+      "visited": false
     }
   ]
 }
