@@ -2909,6 +2909,83 @@
       },
       "tz": "America/Mexico_City",
       "visited": false
+    },
+    {
+      "list": "cdmx",
+      "source": "ig-screenshot",
+      "tz": "America/Mexico_City",
+      "visited": false,
+      "id": "cdmx-mercado-coyoacan",
+      "name": "Mercado de Coyoacán",
+      "tag": "eat",
+      "lat": 19.3529,
+      "lng": -99.1611,
+      "note": "El puesto es Quesadillas Lucha — \"las mejores desde 1968\", fritas o de comal ($20-35, efectivo). También tostadas famosas. ~8am-8pm. Del reel de @jimeeats; combina con Casa Azul a 5 min",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Mercado+de+Coyoacan+CDMX",
+      "links": {
+        "ig": "https://www.instagram.com/quesadillasluchacdmx/"
+      },
+      "hours": null
+    },
+    {
+      "list": "cdmx",
+      "source": "ig-screenshot",
+      "tz": "America/Mexico_City",
+      "visited": false,
+      "id": "cdmx-tetetlan",
+      "name": "Tetetlán",
+      "tag": "eat",
+      "lat": 19.3252,
+      "lng": -99.2043,
+      "note": "Restaurante + café en las caballerizas de Casa Pedregal (Luis Barragán) — piso de vidrio sobre lava volcánica, desayunos top. Av. de las Fuentes 180-B, Pedregal. Del reel de @jimeeats",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Tetetlan+Av+de+las+Fuentes+180+CDMX",
+      "links": {
+        "ig": "https://www.instagram.com/tetetlan/"
+      },
+      "hours": {
+        "sun": [
+          [
+            "06:45",
+            "23:45"
+          ]
+        ],
+        "mon": [
+          [
+            "06:45",
+            "23:45"
+          ]
+        ],
+        "tue": [
+          [
+            "06:45",
+            "23:45"
+          ]
+        ],
+        "wed": [
+          [
+            "06:45",
+            "23:45"
+          ]
+        ],
+        "thu": [
+          [
+            "06:45",
+            "01:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:45",
+            "01:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:45",
+            "01:00"
+          ]
+        ]
+      }
     }
   ]
 }
