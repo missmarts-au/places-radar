@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-08-10",
+  "updated": "2026-08-11",
   "places": [
     {
       "id": "cdmx-el-vilsito",
@@ -2557,6 +2557,186 @@
         "sun": [
           [
             "09:00",
+            "19:00"
+          ]
+        ]
+      }
+    },
+    {
+      "list": "nyc",
+      "source": "martha",
+      "tz": "America/New_York",
+      "visited": false,
+      "id": "nyc-prince-street-pizza",
+      "name": "Prince Street Pizza",
+      "tag": "eat",
+      "lat": 40.7229,
+      "lng": -73.9946,
+      "note": "Los pepperoni squares famosos — 27 Prince St, Nolita. Fila casi siempre pero avanza rápido; abierto hasta tarde (3-5am). De Nadia 🍕",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Prince+Street+Pizza+27+Prince+St+New+York+NY",
+      "links": {
+        "ig": "https://www.instagram.com/princestreetpizza/"
+      },
+      "hours": {
+        "mon": [
+          [
+            "10:00",
+            "03:00"
+          ]
+        ],
+        "tue": [
+          [
+            "10:00",
+            "03:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "00:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "05:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "05:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "05:00"
+          ]
+        ],
+        "sun": [
+          [
+            "10:00",
+            "03:00"
+          ]
+        ]
+      }
+    },
+    {
+      "list": "nyc",
+      "source": "martha",
+      "tz": "America/New_York",
+      "visited": false,
+      "id": "nyc-chelsea-market",
+      "name": "Chelsea Market",
+      "tag": "eat",
+      "lat": 40.7424,
+      "lng": -74.006,
+      "note": "Food hall enorme — tacos Los Mariscos, lobster de Lobster Place, Fat Witch brownies. 75 9th Ave; conecta perfecto con el High Line y Little Island",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Chelsea+Market+75+9th+Ave+New+York+NY",
+      "links": {
+        "ig": "https://www.instagram.com/chelseamarketny/"
+      },
+      "hours": {
+        "mon": [
+          [
+            "07:00",
+            "22:00"
+          ]
+        ],
+        "tue": [
+          [
+            "07:00",
+            "22:00"
+          ]
+        ],
+        "wed": [
+          [
+            "07:00",
+            "22:00"
+          ]
+        ],
+        "thu": [
+          [
+            "07:00",
+            "22:00"
+          ]
+        ],
+        "fri": [
+          [
+            "07:00",
+            "22:00"
+          ]
+        ],
+        "sat": [
+          [
+            "07:00",
+            "22:00"
+          ]
+        ],
+        "sun": [
+          [
+            "07:00",
+            "22:00"
+          ]
+        ]
+      }
+    },
+    {
+      "list": "nyc",
+      "source": "martha",
+      "tz": "America/New_York",
+      "visited": false,
+      "id": "nyc-lego-fifth-ave",
+      "name": "LEGO Store Fifth Avenue",
+      "tag": "see",
+      "lat": 40.7595,
+      "lng": -73.9769,
+      "note": "La tienda insignia de LEGO — esculturas gigantes y el dragón de Rockefeller. 636 5th Ave, gratis, combina con Rockefeller Center",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=LEGO+Store+636+Fifth+Ave+New+York+NY",
+      "links": {
+        "ig": "https://www.instagram.com/lego/"
+      },
+      "hours": {
+        "mon": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "sun": [
+          [
+            "10:00",
             "19:00"
           ]
         ]
