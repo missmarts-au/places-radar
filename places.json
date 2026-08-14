@@ -3046,6 +3046,120 @@
       },
       "tz": "America/New_York",
       "visited": false
+    },
+    {
+      "list": "cdmx",
+      "source": "martha",
+      "tz": "America/Mexico_City",
+      "visited": false,
+      "id": "cdmx-monumento-revolucion",
+      "name": "Monumento a la Revolución",
+      "tag": "see",
+      "lat": 19.4363,
+      "lng": -99.1547,
+      "note": "Sube al mirador 360° en el elevador panorámico — horario del mirador en la tarjeta (la plaza siempre está abierta, con fuentes donde juegan los niños). Col. Tabacalera; cerca de El Califa de León",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Monumento+a+la+Revolucion+CDMX",
+      "hours": {
+        "mon": [
+          [
+            "12:00",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "12:00",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "12:00",
+            "20:00"
+          ]
+        ],
+        "thu": [
+          [
+            "12:00",
+            "20:00"
+          ]
+        ],
+        "fri": [
+          [
+            "12:00",
+            "22:00"
+          ]
+        ],
+        "sat": [
+          [
+            "12:00",
+            "22:00"
+          ]
+        ],
+        "sun": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ]
+      }
+    },
+    {
+      "list": "cdmx",
+      "source": "martha",
+      "tz": "America/Mexico_City",
+      "visited": false,
+      "id": "cdmx-restaurante-enrique",
+      "name": "Restaurante Enrique",
+      "tag": "eat",
+      "lat": 19.289,
+      "lng": -99.173,
+      "note": "Clásico de Tlalpan desde 1944 — barbacoa, tortas gigantes y mariachi en vivo, estilo hacienda. Insurgentes Sur 4061, cerquita de tu base ⭐",
+      "gmaps": "https://www.google.com/maps/search/?api=1&query=Restaurante+Enrique+Insurgentes+Sur+4061+CDMX",
+      "hours": {
+        "mon": [
+          [
+            "08:30",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "08:30",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "08:30",
+            "20:00"
+          ]
+        ],
+        "thu": [
+          [
+            "08:30",
+            "20:00"
+          ]
+        ],
+        "fri": [
+          [
+            "08:30",
+            "20:00"
+          ]
+        ],
+        "sat": [
+          [
+            "08:30",
+            "20:00"
+          ]
+        ],
+        "sun": [
+          [
+            "08:30",
+            "20:00"
+          ]
+        ]
+      }
     }
   ]
 }
